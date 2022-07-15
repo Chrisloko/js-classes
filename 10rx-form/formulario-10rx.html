@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Image Sorter</title>
+		
+		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+		<!-- <link rel="stylesheet" type="text/css" href="https://testing.ssinvent.com/index.css"> -->
+		<style>
+			#main-content .container{
+			padding-top:0!important;
+			}
+			.bck-form{
+				background-color: #d4d9dd;
+				padding: 20px;
+				border-radius: 0 20px 20px 0;
+			}
+			form .form-columns-2{
+				display: flex;
+				justify-content: space-between;
+			}
+			#contact-form form .form-columns-2 .hs-firstname, 
+			#contact-form form .form-columns-2 .hs-lastname,
+			#contact-form form .form-columns-2 .hs-email,
+			#contact-form form .form-columns-2 .hs-phone  {
+				width: 48%;
+			}
+			#contact-form form .form-columns-2:nth-child(2),
+			#contact-form form .form-columns-1{
+				padding-top: 10px;
+			}
+			
+			#contact-form fieldset{
+				max-width: 100%;
+			}
+
+			#contact-form input[type="text"],
+			#contact-form input[type="email"],
+			#contact-form input[type="tel"],
+			#contact-form textarea
+			{
+				width: 100%;
+				border-radius: 20px;
+				padding: 5px 10px;
+				min-height: 25px;
+				border: 1px solid #000;
+			} 
+			textarea{
+				min-height: 60px;
+				border-radius: 28px;
+				padding: 10px 10px;
+			}
+			.actions{
+				text-align: right;
+			}
+			input[type="submit"]{
+				color: #fff;
+				background-color: #00487C;
+				border: 1px solid #00487C;
+				border-radius: 22px;
+				padding: 10px 15px;
+				cursor: pointer;
+				transition: 0.3s ease;
+				font-weight: 600;
+			}
+			input[type="submit"]:hover{
+				color: #00487C;
+				background-color: #fff;		
+			}
+			.hs-error-msgs{
+				padding-left: 0;
+				list-style: none;
+				color: #00487C;
+				margin: 5px 0 10px;
+
+			}
+			.hs-error-msg{
+				font-size: 12px;
+			}
+			@media(max-width:450px){
+				.bck-form{
+				background-color: #d4d9dd;
+				padding: 20px;
+				border-radius: 0 0px 20px 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div id="contact-form" class="col-md-5 bck-form">
+							<!--[if lte IE 8]>
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+					<![endif]-->
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+					<script>
+					hbspt.forms.create({
+						region: "na1",
+						portalId: "21292125",
+						formId: "7b51364a-dded-42d6-964c-4fe28fd793c2"
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+</html>

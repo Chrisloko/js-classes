@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="step-form" class="container form-container">
+        <div class="row w-100">
+            <div class="col-md-6">
+                <form action="" class="form">
+                    <h2>Registration form</h2>
+                    <!-- progress bar -->
+                    <div class="progressbar">
+                        <div class="progress" id="progress"></div>
+                        <div class="progress-step progress-step-active" data-title="Intro"></div>
+                        <div class="progress-step" data-title="Contact"></div>
+                        <div class="progress-step" data-title="ID"></div>
+                        <div class="progress-step" data-title="Password"></div>
+                    </div>
+                    <!-- steps -->
+                    <div class="form-step form-step-active">
+                        <div class="input-group">
+                            <label for="username">Username </label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="input-group">
+                            <label for="position">Position</label>
+                            <input type="text" name="position" id="position">
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-next ml-auto">Next</a>
+                        </div>
+                    </div>
+                    <div class="form-step">
+                        <div class="input-group">
+                            <label for="phone">Phone </label>
+                            <input type="text" name="phone" id="phone">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev ml-auto">Previous</a>
+                            <a href="#" class="btn btn-next ml-auto">Next</a>
+                        </div>
+                    </div>
+                    <div class="form-step">
+                        <div class="input-group">
+                            <label for="dob">DOB </label>
+                            <input type="text" name="dob" id="dob">
+                        </div>
+                        <div class="input-group">
+                            <label for="ID">ID</label>
+                            <input type="text" name="ID" id="ID">
+                        </div>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev ml-auto">Previous</a>
+                            <a href="#" class="btn btn-next ml-auto">Next</a>
+                        </div>
+                    </div>
+                    <div class="form-step">
+                        <div class="input-group">
+                            <label for="password">Password </label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <div class="input-group">
+                            <label for="confirmPassword">Confirm password</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword">
+                        </div>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev ml-auto">Previous</a>
+                            <input type="submit" value="Submit" class="btn">
+                        </div>
+                    </div>
+                </form>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
+

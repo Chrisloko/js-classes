@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Sorter</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<style>
+		#main-content .container{
+		  padding-top:0!important;
+		}
+		.bck-form{
+			background-color: #d4d9dd;
+			padding: 20px;
+			border-radius: 0 20px 20px 0;
+		}
+		form .form-columns-2{
+			display: flex;
+			justify-content: space-between;
+		}
+		#contact-form form .form-columns-2 .hs-firstname, 
+		#contact-form form .form-columns-2 .hs-lastname,
+		#contact-form form .form-columns-2 .hs-email,
+		#contact-form form .form-columns-2 .hs-phone  {
+			width: 48%;
+		}
+		#contact-form form .form-columns-2:nth-child(2),
+		#contact-form form .form-columns-1{
+			padding-top: 10px;
+		}
+		
+		#contact-form fieldset{
+			max-width: 100%;
+		}
+
+		#contact-form input[type="text"],
+		#contact-form input[type="email"],
+		#contact-form input[type="tel"],
+		#contact-form textarea
+		{
+			width: 100%;
+			border-radius: 20px;
+			padding: 5px 10px;
+			min-height: 25px;
+			border: 1px solid #000;
+		} 
+		textarea{
+			min-height: 60px;
+			border-radius: 28px;
+			padding: 10px 10px;
+		}
+		.actions{
+			text-align: right;
+		}
+		input[type="submit"]{
+			color: #fff;
+			background-color: #00487C;
+			border: 1px solid #00487C;
+			border-radius: 22px;
+			padding: 10px 15px;
+			cursor: pointer;
+			transition: 0.3s ease;
+			font-weight: 600;
+		}
+		input[type="submit"]:hover{
+			color: #00487C;
+			background-color: #fff;		
+		}
+		.hs-error-msgs{
+			padding-left: 0;
+			list-style: none;
+			color: #00487C;
+			margin: 5px 0 10px;
+
+		}
+		.hs-error-msg{
+			font-size: 12px;
+		}
+		@media(max-width:450px){
+			.bck-form{
+			background-color: #d4d9dd;
+			padding: 20px;
+			border-radius: 0 0px 20px 20px;
+			}
+		}
+	  </style>
+</head>
+<body>
+	
+
+	<div id="gallery-section">
+		<section id="face-procedures">
+			<div class="container">
+				<div class="row">
+					<div class="categories col-12 align-mobile">
+						<ul>
+							<li><a href="#face-procedures"> FACE</a></li>
+							<span> | </span>
+							<li><a href="#body-procedures">BODY</a></li>
+							<span> | </span>
+							<li><a href="#breast-procedures">BREAST</a></li>
+							<span> | </span>
+							<li><a href="#mens-procedures">MEN'S</a></li>
+							<span> | </span>
+							<li><a href="#non-procedures">NON-SURGICAL</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 align-mobile">
+						<h1>View Before & After Images in Our Gallery</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 align-mobile">
+						<h3>Face procedures</h3>
+						<div class="buttons">
+							<button class="pressme active" onclick="show()">ALL</button>
+							<button class="pressme" onclick="show('neck')">NECK LIFT</button>
+							<button class="pressme" onclick="show('face')">FACE LIFT</button>
+							<!-- <button class="pressme" onclick="show('patient1-face')">Patient 1</button> -->
+							<!-- <button class="pressme"  onclick="show('patient2')">Patient 2</button>
+							<button class="pressme" onclick="show('patient3')">Patient 3</button>
+							
+							<button class="pressme" onclick="show('body-proc')">Body procedures</button>
+							<button class="pressme" onclick="show('face-proc')">Face procedures</button>
+							
+							<button class="pressme" onclick="show('lipo')">lipo</button> -->
+				
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div id="gallery" class="gallery flex-col">
+							
+							<img onclick="showFilteredModal('.patient1-face.face')"  src="https://testing.ssinvent.com/img/face-lift-patient-1-1.jpg" class="patient1-face face-proc face" loading="lazy">
+
+							<img onclick="showFilteredModal('.patient2-face.face')" src="https://testing.ssinvent.com/img/face-lift-patient-2-1.jpg" class="patient1-face face-proc face" loading="lazy">
+
+							<img onclick="showFilteredModal('.patient3-face.face')" src="https://testing.ssinvent.com/img/face-lift-patient-3-1.jpg" class="face" loading="lazy">
+
+							<img onclick="showFilteredModal('.patient1-neck.neck')" src="https://testing.ssinvent.com/img/neck-lift-patient-1-1.jpg" class="patient1-neck body-proc neck" loading="lazy">
+
+							<img onclick="showFilteredModal('.patient2-neck.neck')" src="https://testing.ssinvent.com/img/neck-lift-patient-2-1.jpg" class="patient2-neck body-proc neck" loading="lazy">
+
+							<img onclick="showFilteredModal('.patient3-neck.neck')" src="https://testing.ssinvent.com/img/neck-lift-patient-3-1.jpg" class="patient3-neck body-proc neck" loading="lazy">
+				
+				
+							
+						
+						</div>
+						<div id="filteredGallery" class="d-none flex-col gallery">
+
+						</div>
+					
+					</div>
+				</div>				
+			</div>
+	
+			<!-- <button class="modal-toggle">Show modal</button> -->
+		</section>
+		<section id="body-procedures" class="sec-pad">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 align-mobile">
+						<h3>Body procedures</h3>
+						<div class="buttons">
+							<button class="pressme2 active-body" onclick="showBody()">ALL</button>
+							<button class="pressme2" onclick="showBody('bbl')">Brazilian Butt Lift</button>
+							<button class="pressme2" onclick="showBody('lipo')">Liposuction</button>
+							<button class="pressme2" onclick="showBody('tummy')">Tummy Tuck</button>
+							<button class="pressme2" onclick="showBody('arm')">Arm Lift</button>
+						</div>
+					</div>
+					<div class="col-12 align-mobile">
+						<div id="gallery-body" class="gallery-body flex-col">
+							<!-- bbl -->
+							<img onclick="showFilteredModal('.patient1-bbl.bbl')" src="https://testing.ssinvent.com/img/bbl-patient-1-1.jpg" class="patient1-bbl bbl" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-bbl.bbl')"  src="https://testing.ssinvent.com/img/bbl-patient-2-1.jpg" class="patient2-bbl bbl" loading="lazy">			
+							<img onclick="showFilteredModal('.patient3-bbl')"  src="https://testing.ssinvent.com/img/bbl-patient-3-1.jpg" class="patient3-bbl bbl" loading="lazy">			
+							<!-- lipo -->
+							<img onclick="showFilteredModal('.patient1-lipo')"  src="https://testing.ssinvent.com/img/lipo-patient-1-1.jpg" class="patient1-lipo lipo" loading="lazy">	
+							<img onclick="showFilteredModal('.patient2-lipo')"  src="https://testing.ssinvent.com/img/lipo-patient-3-1.jpg" class="patient2-lipo lipo" loading="lazy">
+							<img onclick="showFilteredModal('.patient4-lipo')"  src="https://testing.ssinvent.com/img/lipo-patient-4-1.jpg" class="patient4-lipo lipo" loading="lazy">
+							<img onclick="showFilteredModal('.patient5-lipo')"  src="https://testing.ssinvent.com/img/lipo-patient-5-1.jpg" class="patient5-lipo lipo" loading="lazy">
+							<img onclick="showFilteredModal('.patient6-lipo')"  src="https://testing.ssinvent.com/img/lipo-patient-6-1.jpg" class="patient6-lipo lipo" loading="lazy">
+							<!-- tummy -->
+							<img onclick="showFilteredModal('.patient1-tummy')"  src="https://testing.ssinvent.com/img/tummy-patient-1-1.jpg" class="patient1-tummy tummy" loading="lazy">
+							<!-- arm lift -->
+							<img onclick="showFilteredModal('.patient1-arm')"  src="https://testing.ssinvent.com/img/arm-lift-patient-1-1.jpg" class="patient1-arm arm" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-arm')"  src="https://testing.ssinvent.com/img/arm-lift-patient-2-1.jpg" class="patient2-arm arm" loading="lazy">
+
+						</div>
+						<div id="filteredGallery-body" class="d-none flex-col gallery">
+
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+		<section id="breast-procedures" class="sec-pad">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 align-mobile">
+						<h3>Breast procedures</h3>
+						<div class="buttons">
+							<button class="pressme3 active-breast" onclick="showBreast()">ALL</button>
+							<button class="pressme3" onclick="showBreast('aug')">Breast Augmentation</button>
+							<button class="pressme3" onclick="showBreast('lift')">Breast Lift</button>
+							<button class="pressme3" onclick="showBreast('transfer')">Fat transfer</button>
+						</div>
+					</div>
+					<div class="col-12 align-mobile">
+						<div id="gallery-breast" class="gallery-breast flex-col">
+							<!-- breast aug -->
+							<img onclick="showFilteredModal('.patient1-aug.aug')" src="https://testing.ssinvent.com/img/breast-aug-p-1-1.jpg" class="patient1-aug aug" loading="lazy">
+							<!-- breast lift -->
+							<img onclick="showFilteredModal('.patient1-lift.lift')" src="https://testing.ssinvent.com/img/breast-lift-patient-1-1.jpg" class="patient1-lift lift" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-lift.lift')" src="https://testing.ssinvent.com/img/breast-lift-patient-2-1.jpg" class="patient2-lift lift" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-lift.lift')" src="https://testing.ssinvent.com/img/breast-lift-patient-3-1.jpg" class="patient3-lift lift" loading="lazy">
+							<!-- fat transfer -->
+							<img onclick="showFilteredModal('.patient1-transfer.transfer')" src="https://testing.ssinvent.com/img/fat-transfer-patient-1-1.jpg" class="patient1-transfer transfer" loading="lazy">
+						
+						</div>
+						<div id="filteredGallery-breast" class="d-none flex-col gallery">
+
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+		<section id="mens-procedures" class="sec-pad">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 align-mobile">
+						<h3>Men's procedures</h3>
+						<div class="buttons">
+							<button class="pressme4 active-mens" onclick="showmens()">ALL</button>
+							<button class="pressme4" onclick="showmens('fue')">Fue Hair Transplant</button>
+							<button class="pressme4" onclick="showmens('smart-lipo')">Lipo 360</button>
+							<button class="pressme4" onclick="showmens('neck')">Neck Lift</button>
+							<button class="pressme4" onclick="showmens('fillers')">Fillers</button>
+				
+						</div>
+					</div>
+					<div class="col-12 align-mobile">
+						<div id="gallery-mens" class="gallery-mens flex-col">
+							<!-- smart lipo -->
+							<img onclick="showFilteredModal('.patient1-smart-lipo.smart-lipo')"  src="https://testing.ssinvent.com/img/mens-lipo-patient-1-1.jpg" class="patient1 smart-lipo" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-smart-lipo.smart-lipo')"  src="https://testing.ssinvent.com/img/mens-lipo-patient-2-1-thumb.jpg" class="patient1 smart-lipo" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-smart-lipo.smart-lipo')"  src="https://testing.ssinvent.com/img/mens-lipo-patient-3-1.jpg" class="patient1 smart-lipo" loading="lazy">
+							<!-- fue hair -->
+							<img onclick="showFilteredModal('.patient1-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-1-1.jpg" class="patient1 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-2-1.jpg" class="patient2 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-3-1.jpg" class="patient3 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient4-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-4-1.jpg" class="patient4 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient5-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-5-1.jpg" class="patient5 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient6-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-6-1.jpg" class="patient6 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient7-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-7-1.jpg" class="patient7 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient8-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-8-1.jpg" class="patient8 fue" loading="lazy">
+
+							<img onclick="showFilteredModal('.patient3-neck.neck')"  src="https://testing.ssinvent.com/img/neck-lift-patient-3-1.jpg" class="patient3-neck neck" loading="lazy">
+
+						
+						</div>
+						<div id="filteredGallery-mens" class="d-none flex-col gallery">
+
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+		<section id="non-procedures" class="sec-pad">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 align-mobile">
+						<h3>Non-Surgical Procedures						</h3>
+						<div class="buttons">
+							<button class="pressme5 active-non" onclick="shownon()">ALL</button>
+							<button class="pressme5" onclick="shownon('botox')">Botox &amp; Dysport</button>
+							<button class="pressme5" onclick="shownon('lips')">Lip Filler</button>
+							<button class="pressme5" onclick="shownon('eye')">Under Eye Filler</button>
+							<button class="pressme5" onclick="shownon('other')">More Filler</button>
+							<button class="pressme5" onclick="shownon('fue')">Fue Hair Transplant</button>
+						</div>
+					</div>
+					<div class="col-12 align-mobile">
+						<div id="gallery-non" class="gallery-nonsurgical flex-col">
+							<!-- botox -->
+							<img onclick="showFilteredModal('.patient1-botox.botox')" src="https://testing.ssinvent.com/img/botox-patient-1-1.jpg" class="patient1-botox botox" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-botox.botox')" src="https://testing.ssinvent.com/img/botox-patient-2-1.jpg" class="patient2-botox botox" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-botox.botox')" src="https://testing.ssinvent.com/img/botox-patient-3-1.jpg" class="patient3-botox botox" loading="lazy">
+							<!-- lip -->
+							<img onclick="showFilteredModal('.patient1-lips.lips')" src="https://testing.ssinvent.com/img/lips-patient-1-1.jpg" class="patient1-lips lips" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-lips.lips')" src="https://testing.ssinvent.com/img/lips-patient-2-1.jpg" class="patient2-lips lips" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-lips.lips')" src="https://testing.ssinvent.com/img/lips-patient-3-1.jpg" class="patient3-lips lips" loading="lazy">
+							<img onclick="showFilteredModal('.patient4-lips.lips')" src="https://testing.ssinvent.com/img/lips-patient-4-1.jpg" class="patient4-lips lips" loading="lazy">
+							<img onclick="showFilteredModal('.patient5-lips.lips')" src="https://testing.ssinvent.com/img/lips-patient-5-1.jpg" class="patient5-lips lips" loading="lazy">
+							<img onclick="showFilteredModal('.patient6-lips.lips')" src="https://testing.ssinvent.com/img/lips-patient-6-1.jpg" class="patient6-lips lips" loading="lazy">
+							<!-- eye -->
+							<img onclick="showFilteredModal('.patient1-eye.eye')" src="https://testing.ssinvent.com/img/eye-filler-patient-1-1.jpg" class="patient1-eye eye" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-eye.eye')" src="https://testing.ssinvent.com/img/eye-filler-patient-2-1.jpg" class="patient2-eye eye" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-eye.eye')" src="https://testing.ssinvent.com/img/eye-filler-patient-3-1.jpg" class="patient3-eye eye" loading="lazy">
+							<img onclick="showFilteredModal('.patient4-eye.eye')" src="https://testing.ssinvent.com/img/eye-filler-patient-4-1.jpg" class="patient4-eye eye" loading="lazy">
+							<!-- other fillers -->
+							<img onclick="showFilteredModal('.patient1-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-1-1.jpg" class="patient1-other other" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-2-1.jpg" class="patient2-other other" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-3-1.jpg" class="patient3-other other" loading="lazy">
+							<img onclick="showFilteredModal('.patient4-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-4-1.jpg" class="patient4-other other" loading="lazy">
+							<img onclick="showFilteredModal('.patient5-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-5-1.jpg" class="patient5-other other" loading="lazy">
+							<img onclick="showFilteredModal('.patient6-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-6-1.jpg" class="patient6-other other" loading="lazy">
+							<img onclick="showFilteredModal('.patient7-other.other')" src="https://testing.ssinvent.com/img/patient-other-filler-7-1.jpg" class="patient7-other other" loading="lazy">
+							<!-- fue -->
+							<img onclick="showFilteredModal('.patient1-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-1-1.jpg" class="patient1 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient2-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-2-1.jpg" class="patient2 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient3-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-3-1.jpg" class="patient3 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient4-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-4-1.jpg" class="patient4 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient5-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-5-1.jpg" class="patient5 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient6-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-6-1.jpg" class="patient6 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient7-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-7-1.jpg" class="patient7 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient8-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-8-1.jpg" class="patient8 fue" loading="lazy">
+							<img onclick="showFilteredModal('.patient9-fue.fue')"  src="https://testing.ssinvent.com/img/fue-hair-patient-9-1.jpg" class="patient9 fue" loading="lazy">
+						</div>
+						<div id="filteredGallery-non" class="d-none flex-col gallery">
+
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+	</div>
+	
+	<!-- INICIO EJEMPLO -->
+	<!-- <div class="selectors">
+
+		<img onclick="showFilteredModal('.patient1.lipo')" src="./img/lipo-1.jpeg" class="patient1 body-proc lipo" width="200">
+
+		<img onclick="showFilteredModal('.patient1.neck')"  src="./img/neck-lift-1.jpeg" class="patient1 face-proc neck" width="200">
+
+		<img onclick="showFilteredModal('.patient2.neck')"  src="./img/neck-lift-1.jpeg" class="patient2 face-proc neck" width="200">
+
+		<img onclick="showFilteredModal('.patient3.face')"  src="./img/face-lift-1.jpeg" class="patient3 face-proc face" width="200">
+	
+	</div> -->
+	<div class="modal">
+    	<div class="modal-overlay modal-toggle"></div>
+	    <div class="modal-wrapper modal-transition">
+	      <div class="modal-header">
+	        <button class="modal-close modal-toggle">X</button>
+	      </div>
+	      
+	      <div class="modal-body">
+	        <div class="modal-content">
+		         <div class="slider" >
+					 <!-- face procedures -->
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-1-1.jpg" class="patient1-face face">
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-1-2.jpg" class="patient1-face face">
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-1-3.jpg" class="patient1-face face">
+
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-2-1.jpg" class="patient2-face face">
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-2-2.jpg" class="patient2-face face">
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-2-3.jpg" class="patient2-face face">
+
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-3-1.jpg" class="patient3-face face">
+					<img src="https://testing.ssinvent.com/img/face-lift-patient-3-2.jpg" class="patient3-face face">
+
+					<img src="https://testing.ssinvent.com/img/neck-lift-patient-1-1.jpg" class="patient1-neck neck">
+					<img src="https://testing.ssinvent.com/img/neck-lift-patient-1-2.jpg" class="patient1-neck neck">
+					<img src="https://testing.ssinvent.com/img/neck-lift-patient-1-3.jpg" class="patient1-neck neck">
+
+					<img src="https://testing.ssinvent.com/img/neck-lift-patient-2-1.jpg" class="patient2-neck neck">
+					<img src="https://testing.ssinvent.com/img/neck-lift-patient-2-2.jpg" class="patient2-neck neck">
+
+					
+					<!-- body procedures -->
+					<!-- bbl -->
+					<img src="https://testing.ssinvent.com/img/bbl-patient-1-1.jpg" class="patient1-bbl bbl">
+					<img src="https://testing.ssinvent.com/img/bbl-patient-2-1.jpg" class="patient2-bbl bbl">
+					<img src="https://testing.ssinvent.com/img/bbl-patient-3-1.jpg" class="patient3-bbl bbl">
+					<img src="https://testing.ssinvent.com/img/bbl-patient-3-2.jpg" class="patient3-bbl bbl">
+
+					<!-- lipo -->
+					<img src="https://testing.ssinvent.com/img/lipo-patient-1-1.jpg" class="patient1-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-patient-1-2.jpg" class="patient1-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-patient-1-3.jpg" class="patient1-lipo lipo">
+
+					<img src="https://testing.ssinvent.com/img/lipo-patient-3-1.jpg" class="patient2-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-patient-2-1.jpg" class="patient2-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-patient-3-2.jpg" class="patient2-lipo lipo">
+
+					<img src="https://testing.ssinvent.com/img/lipo-patient-4-1.jpg" class="patient4-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-patient-4-2.jpg" class="patient4-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-patient-4-3.jpg" class="patient4-lipo lipo">
+
+					<img src="https://testing.ssinvent.com/img/lipo-patient-5-1.jpg" class="patient5-lipo lipo">
+
+					<img src="https://testing.ssinvent.com/img/lipo-patient-6-1.jpg" class="patient6-lipo lipo">
+					<img src="https://testing.ssinvent.com/img/lipo-2.jpeg" class="patient1 lipo">
+
+					<!-- tummy tuck -->
+
+					<img src="https://testing.ssinvent.com/img/tummy-patient-1-1.jpg" class="patient1-tummy tummy">
+					<img src="https://testing.ssinvent.com/img/tummy-patient-1-2.jpg" class="patient1-tummy tummy">
+					<img src="https://testing.ssinvent.com/img/tummy-patient-1-3.jpg" class="patient1-tummy tummy">
+					<!-- arm lift -->
+
+					<img src="https://testing.ssinvent.com/img/arm-lift-patient-1-1.jpg" class="patient1-arm arm">
+					<img src="https://testing.ssinvent.com/img/arm-lift-patient-1-2.jpg" class="patient1-arm arm">
+					<img src="https://testing.ssinvent.com/img/arm-lift-patient-1-3.jpg" class="patient1-arm arm">
+
+					<img src="https://testing.ssinvent.com/img/arm-lift-patient-2-1.jpg" class="patient2-arm arm">
+
+					<!-- breast procedures -->
+					<!-- breast aug -->
+
+					<img src="https://testing.ssinvent.com/img/breast-aug-p-1-1.jpg" class="patient1-aug aug">
+					<img src="https://testing.ssinvent.com/img/breast-aug-p-1-2.jpg" class="patient1-aug aug">
+
+					<!-- breast lift -->
+					<img src="https://testing.ssinvent.com/img/breast-lift-patient-1-1.jpg" class="patient1-lift lift">
+					<img src="https://testing.ssinvent.com/img/breast-lift-patient-1-2.jpg" class="patient1-lift lift">
+
+					<img src="https://testing.ssinvent.com/img/breast-lift-patient-2-1.jpg" class="patient2-lift lift">
+
+					<img src="https://testing.ssinvent.com/img/breast-lift-patient-3-1.jpg" class="patient3-lift lift">
+					<img src="https://testing.ssinvent.com/img/breast-lift-patient-3-2.jpg" class="patient3-lift lift">
+					<img src="https://testing.ssinvent.com/img/breast-lift-patient-3-3.jpg" class="patient3-lift lift">
+					<!-- fat transfer -->
+					<img src="https://testing.ssinvent.com/img/fat-transfer-patient-1-1.jpg" class="patient1-transfer transfer">
+					<img src="https://testing.ssinvent.com/img/fat-transfer-patient-1-2.jpg" class="patient1-transfer transfer">
+					<img src="https://testing.ssinvent.com/img/fat-transfer-patient-1-3.jpg" class="patient1-transfer transfer">
+
+					<!-- mens -->
+					<!-- smart lipo -->
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-1-1.jpg" class="patient1-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-1-2.jpg" class="patient1-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-2-1.jpg" class="patient2-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-2-2.jpg" class="patient2-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-2-3.jpg" class="patient2-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-3-1.jpg" class="patient3-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-3-1.jpg" class="patient3-smart-lipo smart-lipo">
+					<img src="https://testing.ssinvent.com/img/mens-lipo-patient-3-1.jpg" class="patient3-smart-lipo smart-lipo">
+
+					<!-- fue -->
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-1-1.jpg" class="patient1-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-2-1.jpg" class="patient2-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-3-1.jpg" class="patient3-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-3-2.jpg" class="patient3-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-4-1.jpg" class="patient4-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-5-1.jpg" class="patient5-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-6-1.jpg" class="patient6-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-7-1.jpg" class="patient7-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-8-1.jpg" class="patient8-fue fue">
+
+					<!-- mens neck -->
+					<img src="https://testing.ssinvent.com/img/neck-lift-patient-3-1.jpg" class="patient3-neck neck">
+
+					<!-- non-surgical -->
+					<!-- botox -->
+					<img src="https://testing.ssinvent.com/img/botox-patient-1-1.jpg" class="patient1-botox botox">
+					<img src="https://testing.ssinvent.com/img/botox-patient-2-1.jpg" class="patient2-botox botox">
+					<img src="https://testing.ssinvent.com/img/botox-patient-3-1.jpg" class="patient3-botox botox">
+					<!-- lips -->
+					<img src="https://testing.ssinvent.com/img/lips-patient-1-1.jpg" class="patient1-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-2-1.jpg" class="patient2-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-2-2.jpg" class="patient2-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-3-1.jpg" class="patient3-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-4-1.jpg" class="patient4-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-4-2.jpg" class="patient4-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-5-1.jpg" class="patient5-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-5-2.jpg" class="patient5-lips lips">
+					<img src="https://testing.ssinvent.com/img/lips-patient-6-1.jpg" class="patient6-lips lips">
+					<!-- eye -->
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-1-1.jpg" class="patient1-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-1-2.jpg" class="patient1-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-2-1.jpg" class="patient2-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-2-2.jpg" class="patient2-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-3-1.jpg" class="patient3-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-3-2.jpg" class="patient3-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-4-1.jpg" class="patient4-eye eye">
+					<img src="https://testing.ssinvent.com/img/eye-filler-patient-4-2.jpg" class="patient4-eye eye">
+
+					<!-- other fillers -->
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-1-1.jpg" class="patient1-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-2-1.jpg" class="patient2-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-2-2.jpg" class="patient2-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-3-1.jpg" class="patient3-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-4-1.jpg" class="patient4-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-5-1.jpg" class="patient5-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-6-1.jpg" class="patient6-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-6-2.jpg" class="patient6-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-6-3.jpg" class="patient6-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-7-1.jpg" class="patient7-other other">
+					<img src="https://testing.ssinvent.com/img/patient-other-filler-7-2.jpg" class="patient7-other other">
+
+					<!-- fue -->
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-9-1.jpg" class="patient9-fue fue">
+					<img src="https://testing.ssinvent.com/img/fue-hair-patient-9-2.jpg" class="patient9-fue fue">
+				</div>
+	        </div>
+	      </div>
+	    </div>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="https://testing.ssinvent.com//index.js"></script>
+	<!-- FIN EJEMPLO -->
+</body>
+</html>
