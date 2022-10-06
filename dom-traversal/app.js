@@ -114,6 +114,7 @@ const selectBtn = document.querySelectorAll('.select-me');
 // }
 
 
+
 for(let i= 0; i < selectBtn.length; i++){
     selectBtn[i].addEventListener('click', function(){
         let current = document.querySelector('.active');
@@ -129,29 +130,71 @@ for(let i= 0; i < selectBtn.length; i++){
 
 const mainBtn = document.getElementById('btn-main');
 
-
 mainBtn.addEventListener('click', function(){
-    const input = document.querySelector('.input-main');
     const list = document.querySelector('ul');
-    if(input.value === ''){
-        alert('You need to add text')
+    const input = document.getElementById('main');
+    // const li = document.createElement('li');
+    // li.innerHTML = input.value;
+    if(input.value === ""){
+        alert("value cannot be empty");
     } else{
-        const li = document.createElement('li');
-        li.innerHTML = input.value;
-        console.log(li);
-        list.prepend(li);
-        input.value = '';
+        list.insertAdjacentHTML('afterbegin', 
+        `<li>${input.value}</li>`); 
+        // list.prepend(li);
+        input.value = "";
     }
+    
 });
+
+
+const removeBtn = document.querySelector(".btn-remove");
+
+removeBtn.addEventListener('click', function(){
+    const list = document.querySelector('ul');
+    console.log('clicked');
+    list.lastElementChild.remove();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mainBtn.addEventListener('click', function(){
+//     const input = document.querySelector('.input-main');
+//     const list = document.querySelector('ul');
+//     if(input.value === ''){
+//         alert('You need to add text')
+//     } else{
+//         const li = document.createElement('li');
+//         li.innerHTML = input.value;
+//         console.log(li);
+//         list.prepend(li);
+//         input.value = '';
+//     }
+// });
 
 // removing list item
 
-const removeBtn = document.querySelector('.btn-remove');
+// const removeBtn = document.querySelector('.btn-remove');
 
-removeBtn.addEventListener('click', function(){
-    const lastItem = document.querySelector('li:last-child');
-    lastItem.remove();
-});
+// removeBtn.addEventListener('click', function(){
+//     const lastItem = document.querySelector('li:last-child');
+//     lastItem.remove();
+// });
 
 
 

@@ -183,9 +183,9 @@ li button:hover {
   transition: 0.3s ease;
 }
 .open{
-  transition: 0.3s ease;
+  transition: 0.9s ease;
 }
 .close{
   height: 0;
-  transition: 0.3s ease;
+  transition: 0.9s ease;
 }

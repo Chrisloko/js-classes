@@ -5,7 +5,7 @@ const cancel = document.querySelector('.btn--passive');
 const confirmAddMovieButton = document.querySelector('.btn--success');
 const userInputs = modal.querySelectorAll('input');
 const entryText = document.getElementById('entry-text');
-
+const deleteMovieModal = document.getElementById('delete-modal');
 
 
 const movies = [];
@@ -18,14 +18,8 @@ const updateUI = () =>{
     }
 }
 
-const deleteMovieHandler = function(movieId){
+const deleteMovie = function(){
     let movieIndex = 0;
-    // for(let i = 0; i < movies.length; i++){
-    //     if(movies[i].id === movieId){
-    //         break;
-    //     }
-    //     movieIndex++;
-    // }
     for (const movie of movies){
         if(movie.id === movieId){
             break;
@@ -35,6 +29,19 @@ const deleteMovieHandler = function(movieId){
     movies.splice(movieIndex, 1);
     const listRoot = document.getElementById('movie-list');
     listRoot.children[movieIndex].remove();
+}
+
+const cancelMovieDeletion = function(){
+    
+    deleteMovieHandler();
+    deleteMovieModal.classList.remove('visible');
+}
+
+const deleteMovieHandler = function(movieId){
+    
+    deleteMovieModal.classList.add('visible');
+    backdropClickHandler();
+  // deleteMovie(movieId);
 }
 
 const renderNewMovieElement = (id, title, imageUrl, rating) =>{
@@ -60,7 +67,8 @@ const addMovieFunction = () =>{
    
 }
 const backdropClickHandler = () => {
-    addMovieFunction();
+    backdrop.classList.toggle("visible");
+    cancelMovieDeletion();
  }
 
 const cancelAddMovieHandler = () => {
