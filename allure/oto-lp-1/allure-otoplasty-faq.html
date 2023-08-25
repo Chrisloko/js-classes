@@ -1,0 +1,302 @@
+<!-- chat accordion  2-->
+<style>
+  .hl_page-preview--content .row-bEQezVfw9h {
+    padding: 0!important;
+  }
+  .hl_page-preview--content .col-yoPSRDI6GZ .inner {
+    padding: 0px 0px;
+}
+  #accordion .question-title {
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px 20px;
+    width: 100%;
+    font: inherit;
+    font-weight: 600;
+    color: #666;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    font-size: 19px;
+  }
+  #accordion .heading{
+    font-size: 42px;
+    font-weight: 700;
+    border-bottom: 2px solid #198fb5;
+    text-transform: unset;
+    padding-bottom: 10px;
+  }
+  #accordion .question-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    
+  }
+  #accordion .question-content>div {
+    padding: 20px;
+  }
+  
+  .question.active .question-title {
+    /* color: blue; */
+  }
+  
+  #accordion .question.active .question-content {
+    max-height: 1000px; /* Adjust this value to accommodate your content */
+  }
+   #accordion .plus-minus {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/plus-1.jpg');
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+}
+#accordion .question.active .plus-minus {
+    background-image:url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/minus-1.jpg');
+  }
+  #accordion .mobile-only{
+    display: none;
+  }
+  #accordion .all-questions-mob{
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    max-height: 0;
+  }
+  #accordion .heading-toggle::after {
+    content: "";
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    transition: 0.3s ease;
+    background-image: url('http://www.allureplasticsurgery.com/wp-content/uploads/2023/07/down-arrow.png');
+    width: 40px;
+    height: 26px;
+    background-size: cover;
+    top: 50%;
+  }
+  #accordion .heading-toggle.active-toggle::after {
+    content: "";
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+  }
+  #accordion .mob-head{
+    font-size: 24px;
+    color: #fff;
+    text-align:center;
+  }
+  #accordion.accor-desk{
+     padding:60px 0 0px
+   }
+  @media(max-width:767px){
+    #accordion-gpt .vc_column-inner{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #accordion.blue-bck{
+      background: #438DB1;
+    }
+    #accordion .desk-only{
+      display: none;
+    }
+    #accordion .mobile-only{
+      display: block;
+    }
+  }
+  </style>
+  <div id="accordion" class="accor-desk" style="">
+    <!-- Accordion -->
+  <div class="container">
+    <div class="row w-100">
+      <div class="col-12">
+        
+        <!-- regular accordion -->
+        <div class="desk-only">
+            <h2 class="heading">
+              Frequently Asked Questions
+            </h2>
+            <div class="accordion">
+              <div class="question">
+                <div class="question-title">
+                  Is this procedure really without any cuts?
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    <div>
+                      <p>That is correct. No incision is necessary for the results and there are no scars.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  Are the results permanent?
+                  <div class="plus-minus"></div>
+                  </div>
+                <div class="question-content">
+                  <div>
+                    <p>Yes, absolutely.</p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  Do I have any pain during the procedure?
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    <p>No. You will feel only a small pinch during the application of the local anesthesia.</p>
+                  </div> 
+                </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  
+                  Is there any downtime after the procedure?
+                  
+                  <div class="plus-minus"></div>
+                </div>
+                  <div class="question-content">
+                    <div style="padding: 20px;">
+                      <p style="margin: 0;">Absolutely not. The procedure only takes 1 hour, and patients can return to their normal activities in the next few days.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+          <!-- end regular accordion -->
+          <!-- start mobile accordion -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="accordion" class="blue-bck" style="padding:30px 0 30px">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="mobile-only">
+            <h2 class="heading mob-head heading-toggle">
+              Frequently<br> Asked Questions
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="accordion" style="padding:0px 0 30px">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="mobile-only">
+            <div class="all-questions-mob">
+              <div class="accordion">
+                <div class="question">
+                  <div class="question-title">
+                    Is this procedure really without any cuts?
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      <p>That is correct. No incision is necessary for the results and there are no scars.</p>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    Are the results permanent?
+                    <div class="plus-minus"></div>
+                    </div>
+                  <div class="question-content">
+                    <div>
+                      <p>Yes, absolutely.</p>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    Do I have any pain during the procedure?
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      <p>No. You will feel only a small pinch during the application of the local anesthesia.</p>
+                    </div> 
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    Is there any downtime after the procedure?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                    <div class="question-content">
+                      <div style="padding: 20px;">
+                        <p style="margin: 0;">Absolutely not. The procedure only takes 1 hour, and patients can return to their normal activities in the next few days.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script>
+  
+  const headingToggle = document.querySelector('.heading-toggle');
+  const allQuestions = document.querySelector('.all-questions-mob');
+
+  headingToggle.addEventListener('click', function(e){
+        headingToggle.classList.toggle('active-toggle');
+        allQuestions.classList.toggle('active');
+        if(allQuestions.classList.contains('active')){
+          allQuestions.style.maxHeight = "fit-content";
+        } else{
+            allQuestions.style.maxHeight = 0;
+        }
+  });
+
+
+      // Get all question elements
+      let questions = document.querySelectorAll('.question');
+  
+  // Add click event listener to each question
+  for (let i = 0; i < questions.length; i++) {
+    questions[i].addEventListener('click', function() {
+      // Toggle active class on the clicked question
+      console.log('clicked');
+      questions[i].classList.toggle('active');
+  
+      // Close other open questions
+      for (let j = 0; j < questions.length; j++) {
+        if (questions[j] !== this) {
+          questions[j].classList.remove('active');
+        }
+      }
+    });
+  }
+
+
+  </script>

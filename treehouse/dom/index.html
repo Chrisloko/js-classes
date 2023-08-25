@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and the DOM</title>
+    <link href="./styles.css" rel="stylesheet">
+    <style>
+      .mystyle {
+       display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="" id="headline">My Day</h1>
+        <button id="top-btn">Grow Text</button>
+        <div class="group">
+          <label for="main">What's your task?</label>
+          <input type="text" id="main" class="input-main">
+          <button id="btn-main">Add task</button>
+        </div>
+      </header>
+
+      <button onclick="toggList()" class="btn-toggle">Hide List</button>
+
+      <div id="list" class="list-container">
+        <ul class="unordered-list" aria-live="polite">
+          <li>Make coffee</li>
+          <li>Practice JavaScript</li>
+          <li>Walk the cat</li>
+          <li>Watch a Treehouse video</li>
+          <li>Go swimming</li>
+          <li>Play my guitars</li>
+        </ul>
+        <!-- <button class="btn-remove">Remove Last Task</button> -->
+      </div>
+      <div>
+        <button class="remove-me">Remove me</button>
+      </div>
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
