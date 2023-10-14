@@ -282,21 +282,62 @@
       // Get all question elements
       let questions = document.querySelectorAll('.question');
   
-  // Add click event listener to each question
-  for (let i = 0; i < questions.length; i++) {
-    questions[i].addEventListener('click', function() {
-      // Toggle active class on the clicked question
-      console.log('clicked');
-      questions[i].classList.toggle('active');
+      questions.forEach(question => {
+        question.addEventListener('click', function(){
+          question.classList.toggle('active');
+          questions.forEach(questionInner =>{
+            if(questionInner !== question){
+              questionInner.classList.remove('active');
+            }
+          } )
+        });
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // // Add click event listener to each question
+  // for (let i = 0; i < questions.length; i++) {
+  //   questions[i].addEventListener('click', function() {
+  //     // Toggle active class on the clicked question
+  //     console.log('clicked');
+  //     questions[i].classList.toggle('active');
   
-      // Close other open questions
-      for (let j = 0; j < questions.length; j++) {
-        if (questions[j] !== this) {
-          questions[j].classList.remove('active');
-        }
-      }
-    });
-  }
+  //     // Close other open questions
+  //     for (let j = 0; j < questions.length; j++) {
+  //       if (questions[j] !== this) {
+  //         questions[j].classList.remove('active');
+  //       }
+  //     }
+  //   });
+  // }
 
 
   </script>

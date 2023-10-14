@@ -1,0 +1,94 @@
+<style>
+   #owl-reviews .owl-item {
+    transition: 0.3s all;
+    transform: scale(0.5);
+    }
+    #owl-reviews .owl-carousel.owl-drag .owl-item{
+        opacity: 0;
+    }
+    #owl-reviews .owl-item.active:not(.center) {
+    transform: translateX(30%) scale(0.8);
+    }
+    #owl-reviews .owl-item.active.center {
+    z-index: 1;
+    }
+    #owl-reviews .owl-item.active.center + .active {
+    transform: translateX(-30%) scale(0.8);
+    opacity: 1;
+    }
+    #owl-reviews .owl-item.active.center {
+        z-index: 1;
+        display: block!important;
+        opacity: 1;
+    }
+</style>
+<section id="owl-reviews" class="py-5 d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="owl-carousel gallery-carousel">
+                <div class="gallery-item h-100 d-flex align-items-center justify-content-center">
+                  <img src="https://picsum.photos/g/700/400">
+                </div>
+                <div class="gallery-item h-100 d-flex align-items-center justify-content-center">
+                  <img src="https://picsum.photos/g/700/400">
+                </div>
+                <div class="gallery-item h-100 d-flex align-items-center justify-content-center">
+                  <img src="https://picsum.photos/g/700/400">
+                </div>
+                <div class="gallery-item h-100 d-flex align-items-center justify-content-center">
+                  <img src="https://picsum.photos/g/700/400">
+                </div>
+                <div class="gallery-item h-100 d-flex align-items-center justify-content-center">
+                  <img src="https://picsum.photos/g/700/400">
+                </div>
+                <div class="gallery-item h-100 d-flex align-items-center justify-content-center">
+                  <img src="https://picsum.photos/g/700/400">
+                </div>
+              </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        center: true,
+        responsiveClass:true,
+        nav: true,
+        dots: false,
+        margin: 0,
+        items: 1,
+        responsive: {
+        0: {
+          items: 1,
+          slideBy: 1,
+        },
+        768: {
+          items: 1,
+        },
+        992: {
+          items: 2,
+        }
+      }
+      });
+
+        /**
+         * We are using fullpage.js otherwise to make all    sections 100% height and scrollable etc.
+         */
+        $('body').on('resize', function() {
+        fullHeightSections();
+        });
+
+        function fullHeightSections() {
+        $('section').css('height', $( window ).height()+'px');
+        }
+
+        fullHeightSections();
+
+
+
+  </script>

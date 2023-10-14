@@ -11,6 +11,19 @@
   --color-remove-light: #cb636c;
   --color-remove-dark: #9a3942;
 }
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media(min-width:1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1250px;
+  }
+
+}
 .d-none{
   display:none;
   }

@@ -113,9 +113,9 @@ anotherAllList.addEventListener('click', function(e){
   })
   
 
-document.addEventListener('click', function(e){
-  console.log(e.target.className);
-})
+// document.addEventListener('click', function(e){
+//   console.log(e.target.className);
+// })
 // hovering over the row makes the text transform to uppercase letters
 // anotherAllList.addEventListener('mouseover', function(e){
 
@@ -211,20 +211,46 @@ for(const highlight of highlights){
 // });
 
 
-function hello(greeting){
-  console.log( `${greeting} my name is Jonas`)
+function hello(greeting) {
+  console.log(`${greeting} my name is Jonas`);
 }
 
 hello("Greetings!");
 
-
 const teacher = {
-   firstName : "Ashley",
-   lastName : "Boucher",
-   printName: function(){
-      console.log(`${this.firstName} and ${this.lastName}`);
-   }
-}
+  firstName: "Ashley",
+  lastName: "Boucher",
+  printName: function() {
+    console.log(`${this.firstName} and ${this.lastName}`);
+  },
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

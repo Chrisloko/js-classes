@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>How many people are in space?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <h1>How Many People Are in Space?</h1>
+  <main>
+    <button>View all the People</button>
+    <div id="people"></div>
+
+
+    <div class="container" style="padding-top:90px">
+      <div class="row">
+        <div class="col-12">
+          <div class="btn-cont">
+            <input id="main-input" type="text">
+            <div class="add-btn">Add item</div>
+
+          </div>
+          <div class="list">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/callbacks.js"></script>
+  <script>
+    const mainInput = document.getElementById('main-imput');
+    const addBtn = document.querySelector('.add-btn');
+
+    
+  </script>
+  <style>
+    .btn-cont{
+      display: flex;
+    }
+    .add-btn{
+      cursor: pointer;
+      background-color: red;
+      padding: 15px;
+      color: #fff;
+    }
+    .list{
+      padding-top: 20px;
+    }
+  </style>
+</body>
+</html>

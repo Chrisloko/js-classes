@@ -1,0 +1,376 @@
+<style>
+  #manufacture {
+    padding: 60px 0;
+    background-color: #002e5e;
+  }
+  #manufacture h2 {
+    color: #fff;
+    font-family: "Zuume";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 111.728px;
+    line-height: 104px;
+    text-align: center;
+  }
+  #manufacture .font-fill {
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+
+  #manufacture h3 {
+    text-align: center;
+    font-family: Zuume;
+    font-size: 171px;
+    font-weight: 400;
+    line-height: 164px;
+    letter-spacing: 0.01em;
+  }
+  #manufacture {
+  }
+  #manufacture .align-row {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    text-align: right;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  #manufacture .red-line {
+    border-bottom: 3px solid #d02f2b;
+    width: 36vw;
+    display: inline-block;
+  }
+  #manufacture .row-schedule {
+    display: flex;
+    min-height: 250px;
+    margin: 40px auto;
+    max-width: 2000px;
+  }
+  #manufacture .row-schedule.lg {
+    min-height: 486px;
+  }
+  #manufacture .red-agenda {
+    /*      background-image:url(https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/agenda-row.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+  #manufacture .red-row {
+    position: absolute;
+  }
+  #manufacture .white-agenda {
+    /*       background-image:url(https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/white-box.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 30%;
+    padding-left: 15px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+  #manufacture .white-row {
+    position: absolute;
+    left: 0;
+  }
+  #manufacture .row-schedule h4 {
+    color: white;
+    position: relative;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Poppins;
+  }
+  #manufacture .row-schedule h4.left {
+    padding-left: 9vw;
+    max-width: 874px;
+  }
+  #manufacture .row-schedule h4.left span {
+    display: none;
+  }
+  #manufacture .row-schedule h4.right {
+    padding-left: 15vw;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .xtra-p {
+    padding-bottom: 18px;
+  }
+  .dotted-white-line {
+    border-bottom: 7px dashed #fff;
+    width: 1890px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -142%;
+    top: 390%;
+    overflow: hidden;
+  }
+  @media (max-width: 1754px) {
+    .dotted-white-line {
+      left: -121%;
+    }
+  }
+  @media (max-width: 1600px) {
+    #manufacture .red-row {
+      max-width: 1025px;
+    }
+    .dotted-white-line {
+      left: -146%;
+    }
+  }
+  @media (max-width: 1440px) {
+    #manufacture .row-schedule h4.left span {
+      display: block;
+    }
+    .dotted-white-line {
+      display: none;
+    }
+    #manufacture .row-schedule h4.left span {
+      display: block;
+    }
+    #manufacture .white-agenda {
+      display: none;
+    }
+  }
+  @media (max-width: 1045px) {
+    #manufacture .red-agenda {
+      flex: 0 0 90%;
+      max-width: 90%;
+    }
+    #manufacture .red-row {
+      max-width: 97%;
+    }
+    #manufacture .row-schedule h4 {
+      color: white;
+      position: relative;
+      font-size: 27px;
+      font-weight: 400;
+    }
+    #manufacture .row-schedule h4.left {
+      padding-left: 9vw;
+      max-width: 874px;
+    }
+    #manufacture .row-schedule h4 {
+      color: white;
+      position: relative;
+      font-size: 25px;
+      font-weight: 400;
+    }
+  }
+  @media (max-width: 768px) {
+    #manufacture .row-schedule h4 {
+      color: white;
+      position: relative;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    #manufacture .row-schedule {
+      display: flex;
+      min-height: 200px;
+      margin: 25px auto;
+      max-width: 2000px;
+    }
+    #manufacture .row-schedule.lg {
+      min-height: 486px;
+    }
+    #manufacture .row-schedule h4.left {
+      padding-left: 6vw;
+      max-width: 874px;
+    }
+    #manufacture .row-schedule.lg h4 {
+      font-size: 26px;
+    }
+    #manufacture .row-schedule.lg img {
+      min-height: 400px;
+    }
+  }
+  @media (max-width: 450px) {
+    #manufacture .red-agenda {
+      /*      background-image:url(https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/agenda-row.jpg); */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      flex: 0 0 95%;
+      max-width: 95%;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+    }
+    #manufacture .red-agenda ul {
+    }
+    #manufacture h2 {
+      font-size: 46px;
+      line-height: 1.2;
+    }
+    #manufacture .row-schedule h4 {
+      color: white;
+      position: relative;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    #manufacture .row-schedule {
+      display: flex;
+      min-height: 150px;
+      margin: 25px auto;
+      max-width: 2000px;
+    }
+    #manufacture .row-schedule.lg {
+      min-height: 380px;
+    }
+    #manufacture .row-schedule h4.left {
+      padding-left: 6vw;
+      max-width: 874px;
+    }
+    #manufacture .row-schedule.lg h4 {
+      font-size: 19px;
+    }
+    #manufacture .row-schedule.lg img {
+      min-height: 380px;
+    }
+    #manufacture .row-schedule img {
+      min-height: 150px;
+    }
+    #manufacture h3 {
+      text-align: center;
+      font-family: Zuume;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 164px;
+      letter-spacing: 0.01em;
+    }
+  }
+</style>
+<section id="manufacture">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>
+          {{ module.title }}
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="align-row">
+          <div class="red-line"></div>
+          <h3 class="font-fill">
+            {{ module.sub_title }}
+          </h3>
+          <div class="red-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row-schedule">
+      <div class="red-agenda">
+        <img
+          class="red-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/agenda-row.png"
+        />
+        <h4 class="left">
+          <span>4:00 PM</span>
+          <b>Texas - Mexico Relationship</b><br />
+          with Francisco de la Torre Galindo
+        </h4>
+      </div>
+      <div class="white-agenda of-h">
+        <img
+          class="white-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/white-box.png"
+        />
+        <h4 class="right">
+          4:00 PM
+        </h4>
+      </div>
+    </div>
+    <div class="row-schedule">
+      <div class="red-agenda">
+        <img
+          class="red-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/agenda-row.png"
+        />
+        <h4 class="left">
+          <span>4:30 PM</span>
+          <b>Nearshoring Trends that are Shaping the Market</b> with Jorge
+          Gonzalez Henrichsen
+        </h4>
+      </div>
+      <div class="white-agenda of-h">
+        <img
+          class="white-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/white-box.png"
+        />
+        <h4 class="right">
+          4:30 PM
+        </h4>
+      </div>
+    </div>
+    <div class="row-schedule">
+      <div class="red-agenda">
+        <img
+          class="red-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/agenda-row.png"
+        />
+        <h4 class="left">
+          <span>5:00 PM</span>
+
+          <b
+            >The Best Regions in North America for Nearshore and Supply Chain
+            Solutions</b
+          ><br />
+          with Marcelo López
+        </h4>
+      </div>
+      <div class="white-agenda of-h">
+        <img
+          class="white-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/white-box.png"
+        />
+        <h4 class="right">
+          5:00 PM
+        </h4>
+      </div>
+    </div>
+    <div class="row-schedule lg">
+      <div class="red-agenda">
+        <img
+          class="red-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/agenda-row-lg.png"
+        />
+        <h4 class="left">
+          <span>5:30 PM</span>
+          <b> How to Start Manufacturing in Mexico</b><br />
+          with Arnold Lopez
+
+          <ul style="padding-top:15px;">
+            <li>Steps to Nearshore Your Manufacturing</li>
+            <li>Which Nearshoring Model is Best for You</li>
+            <li>Geographic Requirenments You Need to Know</li>
+            <li>Understanding the Supply Chain in Mexico</li>
+            <li>Costs &amp; Savings</li>
+            <li>The TNC Way</li>
+          </ul>
+        </h4>
+      </div>
+      <div class="white-agenda of-h xtra-p">
+        <img
+          class="white-row"
+          src="https://6669813.fs1.hubspotusercontent-na1.net/hubfs/6669813/Event%20Page/white-box.png"
+        />
+        <h4 class="right">
+          5:30 PM
+        </h4>
+      </div>
+    </div>
+  </div>
+</section>

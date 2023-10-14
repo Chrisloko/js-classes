@@ -1,0 +1,315 @@
+<!-- chat accordion  2-->
+<style>
+    .hl_page-preview--content .row-bEQezVfw9h {
+        padding: 0 !important;
+    }
+
+    .hl_page-preview--content .col-yoPSRDI6GZ .inner {
+        padding: 0px 0px;
+    }
+
+    #accordion .question-title {
+        cursor: pointer;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 15px 20px;
+        width: 100%;
+        font: inherit;
+        font-weight: 300;
+        color: #666;
+        text-align: left;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        transition: background 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        font-size: 22px;
+    }
+
+    #accordion .heading {
+        font-size: 42px;
+        font-weight: 700;
+        text-transform: unset;
+        padding-bottom: 10px;
+    }
+
+    #accordion .question {
+        border: 3px solid #eee;
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+
+    #accordion .question-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+
+    }
+
+    #accordion .question-content>div {
+        padding: 20px;
+    }
+
+    .question-title {
+        font-weight: 300;
+    }
+
+    #accordion .question.active .question-content {
+        max-height: 1000px;
+        /* Adjust this value to accommodate your content */
+    }
+
+    #accordion .plus-minus {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/plus-1.jpg');
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+    }
+
+    #accordion .question.active .plus-minus {
+        background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/minus-1.jpg');
+    }
+
+    #accordion .mobile-only {
+        display: none;
+    }
+
+    #accordion .all-questions-mob {
+        overflow: hidden;
+        transition: 0.2s ease-out;
+        max-height: 0;
+    }
+
+    #accordion .heading-toggle::after {
+        content: "";
+        font-size: 2rem;
+        position: absolute;
+        right: 2rem;
+        transition: 0.3s ease;
+        background-image: url('http://www.allureplasticsurgery.com/wp-content/uploads/2023/07/down-arrow.png');
+        width: 40px;
+        height: 26px;
+        background-size: cover;
+        top: 50%;
+    }
+
+    #accordion .heading-toggle.active-toggle::after {
+        content: "";
+        transform: rotate(180deg);
+        transition: 0.3s ease;
+    }
+
+    #accordion .mob-head {
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+    }
+
+    #accordion.accor-desk {
+        padding: 30px 0 0px
+    }
+
+    .faq-img {
+        max-width: 100%;
+    }
+    #accordion  .btn-cont{
+        margin-top: 15px;
+    }
+    #accordion .trans-blue-btn {
+        font-size: 15px;
+    }
+    #accordion .trans-blue-btn img{
+        width: 30px;
+    }
+    .arrow {
+        position: absolute;
+        right: 12px;
+        transition: 0.3s ease-out;
+        width: 30px;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .trans-blue-btn:hover .arrow {
+        transform: translate(10px, -50%);
+        transition: 0.3s ease-out;
+    }
+    @media(max-width:767px) {
+        #accordion .row.w-100 {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        #accordion-gpt .vc_column-inner {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #accordion.blue-bck {
+            background: #438DB1;
+        }
+
+        .faq-img {
+            display: none;
+        }
+        .d-none-mobile{
+            display: none;
+        }
+        /* #accordion .desk-only{
+        display: none;
+      }
+      #accordion .mobile-only{
+        display: block;
+      } */
+    }
+</style>
+<div id="accordion" class="accor-desk" style="">
+    <!-- Accordion -->
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-md-4">
+                <img class="faq-img" src="https://elitetopaesthetics.com/wp-content/uploads/2023/09/faq-sema.webp" alt="">
+                <div class="btn-cont side-by-side d-none-mobile">
+                    <a href="#form-section" class="btn trans-blue-btn mb-2">
+                      BOOK YOUR FREE CONSULTATION
+                      <img class="arrow" src="https://elitetopaesthetics.com/wp-content/uploads/2023/08/Icono-flecha.webp" alt="">
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-8">
+
+                <!-- regular accordion -->
+                <div class="desk-only">
+                    <h2 class="heading">
+                        Frequently Asked Questions
+                    </h2>
+                    <div class="accordion">
+                        <div class="question">
+                            <div class="question-title">
+
+                                Do I need to exercise and diet to lose weight? 
+          
+
+                                <div class="plus-minus"></div>
+                            </div>
+                            <div class="question-content">
+                                <div style="padding: 20px;">
+                                    <p style="margin: 0;">No. However, when patients implement a healthy diet and lifestyle the weight loss happens faster and in a greater amount.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question-title">
+
+                                Will I gain more weight when I stop taking Semaglutide? 
+          
+
+                                <div class="plus-minus"></div>
+                            </div>
+                            <div class="question-content">
+                                <div style="padding: 20px;">
+                                    <p style="margin: 0;">No. Semaglutide medication will not change your genetic predisposition to burn calories and gain weight. Therefore, the patient must develop during the months of treatment good eating and exercise routines to maintain the desired weight. In addition, some patients may take a couple of months off and get back to taking Semaglutide to reach their ideal weight.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question-title">
+
+                                What are the side effects of Semaglutide? 
+          
+
+                                <div class="plus-minus"></div>
+                            </div>
+                            <div class="question-content">
+                                <div style="padding: 20px;">
+                                    <p style="margin: 0;">The two main side effects of Semaglutide are nausea and constipation. Both side effects may be caused by incorrect patient dosage. They can also be treated with Zofran or MiraLAX. Patients with medullary thyroid carcinoma (MTC) should avoid taking Semaglutide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question-title">
+
+                                What other medications may interact with Semaglutide? 
+          
+
+                                <div class="plus-minus"></div>
+                            </div>
+                            <div class="question-content">
+                                <div style="padding: 20px;">
+                                    <p style="margin: 0;">Because Semaglutide lowers blood sugar, combining it with other medications that do the same such as insulin and diabetes may be dangerous.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question-title">
+                                How does Semaglutide compare to other weight loss medications? 
+          
+                                <div class="plus-minus"></div>
+                            </div>
+                            <div class="question-content">
+                                <div>
+                                    <div>
+                                        <p>One of the reasons Semaglutide is getting a lot of attention from the media is the amount of weight loss compared to other medications. Typically, most medications during trials show an average of 5% to 10% of weight loss compared to 16% of Semaglutide.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end regular accordion -->
+                <!-- start mobile accordion -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    // const headingToggle = document.querySelector('.heading-toggle');
+    // const allQuestions = document.querySelector('.all-questions-mob');
+
+    // headingToggle.addEventListener('click', function(e){
+    //       headingToggle.classList.toggle('active-toggle');
+    //       allQuestions.classList.toggle('active');
+    //       if(allQuestions.classList.contains('active')){
+    //         allQuestions.style.maxHeight = "fit-content";
+    //       } else{
+    //           allQuestions.style.maxHeight = 0;
+    //       }
+    // });
+
+
+    // Get all question elements
+    let questions = document.querySelectorAll('.question');
+
+    // Add click event listener to each question
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener('click', function () {
+            // Toggle active class on the clicked question
+            questions[i].classList.toggle('active');
+
+            // Close other open questions
+            for (let j = 0; j < questions.length; j++) {
+                if (questions[j] !== this) {
+                    questions[j].classList.remove('active');
+                }
+            }
+        });
+    }
+
+
+</script>

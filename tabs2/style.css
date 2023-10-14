@@ -1,0 +1,38 @@
+body{
+    
+}
+
+.tabs{
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.tabs__sidebar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.tabs__button{
+    flex-grow: 1;
+    min-width: 200px;
+    background: #eee;
+}
+.tabs__button:active{
+    background: #dddddd;
+}
+.tabs__button:not(:last-of-type){
+
+}
+.tabs__button--active{
+    font-weight: 700;
+    border:2px solid #009879;
+    background: #ddd;
+}
+.tabs__content{
+    display: none;
+}
+.tabs__content--active{
+    display: block;
+}
+
+

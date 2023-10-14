@@ -1,0 +1,540 @@
+<!-- chat accordion  2-->
+
+
+
+<style>
+    .question-title {
+      cursor: pointer;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      padding: 15px 20px;
+      width: 100%;
+      font: inherit;
+      font-weight: 600;
+      color: #666;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      transition: background 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      font-size: 19px;
+    }
+    
+    .question-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      
+    }
+    .question-content>div {
+      padding: 20px;
+    }
+    
+    .question.active .question-title {
+      /* color: blue; */
+    }
+    
+    .question.active .question-content {
+      max-height: 1000px; /* Adjust this value to accommodate your content */
+    }
+     #accordion .plus-minus {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/plus-1.jpg');
+      height: 24px;
+      width: 24px;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+  }
+  #accordion .question.active .plus-minus {
+      background-image:url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/minus-1.jpg');
+    }
+    .mobile-only{
+      display: none;
+    }
+    .all-questions-mob{
+      overflow: hidden;
+      transition: 0.2s ease-out;
+      max-height: 0;
+    }
+    .heading-toggle::after {
+      content: "";
+      font-size: 2rem;
+      position: absolute;
+      right: 2rem;
+      transition: 0.3s ease;
+      background-image: url('http://www.allureplasticsurgery.com/wp-content/uploads/2023/07/down-arrow.png');
+      width: 40px;
+      height: 26px;
+      background-size: cover;
+      top: 50%;
+    }
+    .heading-toggle.active-toggle::after {
+      content: "";
+      transform: rotate(180deg);
+      transition: 0.3s ease;
+    }
+    .mob-head{
+      font-size: 24px;
+      color: #fff;
+      text-align:center;
+    }
+     .accor-desk{
+       padding:0px 0 0px
+     }
+    @media(max-width:767px){
+      #accordion-gpt .vc_column-inner{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .blue-bck{
+        background: #438DB1;
+      }
+      .desk-only{
+        display: none;
+      }
+      .mobile-only{
+        display: block;
+      }
+    }
+    </style>
+    <div id="accordion" class="accor-desk" style="">
+      <!-- Accordion -->
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-12">
+          
+          <!-- regular accordion -->
+          <div class="desk-only">
+              <h2 class="heading">
+                FILLERS FREQUENTLY ASKED QUESTIONS
+              </h2>
+              <div class="accordion">
+                <div class="question">
+                  <div class="question-title">
+                    Which dermal fillers last longest?
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      <div>
+                        <p>Hyaluronic acid fillers, such as Restylane and Juvederm, tend to 10 months to a year. Calcium hydroxylapatite fillers, such as Radiesse, generally last longer, up to two years. Poly-L-lactic acid fillers, such as Sculptra, also tend to last longer, up to two years or more.</p>
+                        <p>It's important to note that dermal fillers duration can vary from person to person, contributing factors are: patient metabolism, treated area, type of filler, and the amount of product used. Therefore results can never be guaranteed.</p>
+                        <p>We recommend each patient to discuss their treatment goals with a qualified practitioner and to carefully consider the pros and cons of different dermal filler products before making a decision.</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    What does a dermal filler do?
+                    <div class="plus-minus"></div>
+                    </div>
+                  <div class="question-content">
+                    <div>
+                      <p>Dermal fillers are injectable products that restore volume loss and smooth out facial fine lines and wrinkles. Dermal fillers are made of various substances such as: hyaluronic acid, calcium hydroxylapatite, and poly-L-lactic acid.</p>
+                      <p>Dermal fillers are typically used to:</p>
+                      <ul>
+                        <li>Plump thin lips</li>
+                        <li>Restore volume loss</li>
+                        <li>Erase or soften facial creases and wrinkles</li>
+                        <li>Improve the appearance of recessed scars</li>
+                        <li>Increase collagen production</li>
+                        </ul>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    Are dermal fillers Better than Botox?
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      <p>Both dermal fillers and Botox are popular non-surgical treatments that are used to correct or improve the signs of aging. Both products work very differently and serve a different purpose.</p>
+                      <p>Dermal fillers are injectable products that are used to restore volume loss but also to erase or smooth out fine lines and wrinkles.</p>
+                      <p>Botox on the other hand is a treatment that prevents the formation of fine lines and wrinkles by relaxing the strong contraction of expression lines. Botox is typically used to smooth out dynamic wrinkles that are caused by muscle movements, such as frown lines, forehead wrinkles, and crow's feet.</p>
+                    </div> 
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    What are the side effects of dermal fillers?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                    <div class="question-content">
+                      <div style="padding: 20px;">
+                        <p style="margin: 0;"></p><p>Common side effects of dermal fillers are:</p>
+                          <ol>
+                          <li>
+                          <p>Swelling: This is the most common side effect and usually goes away within a few days.</p>
+                          </li>
+                          <li>
+                          <p>Bruising: Dermal fillers may cause bruising at the injection site, which usually disappears within a week or two.</p>
+                          </li>
+                          <li>
+                          <p>Pain or discomfort: Some people may experience pain or discomfort at the injection site, which can usually be managed with over-the-counter pain medications.</p>
+                          </li>
+                          <li>
+                          <p>Redness or irritation: The skin around the injection site may become red or irritated, but this should resolve within a few days.</p>
+                          </li>
+                          <li>
+                          <p>Lumps or bumps: It is possible for dermal fillers to cause lumps or bumps under the skin, but these can usually be massaged or treated with a hyaluronidase injection to dissolve the filler.</p>
+                          </li>
+                          <li>
+                          <p>Allergic reactions: Rarely, people may have an allergic reaction to the ingredients in dermal fillers, which can cause symptoms such as hives, rash, itching, or difficulty breathing.</p>
+                          </li>
+                          </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    What happens when you stop getting fillers?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div style="padding: 20px;">
+                      <p>If you stop getting dermal fillers, the results will gradually fade over time as the product is absorbed by the body. The rate at which the results lasts depends on the specific product, skin type and lifestyle.</p>
+                      <p>It is important to note that dermal fillers are not a permanent solution. Please discuss your treatment plan and goals with a qualified experienced practitioner to determine the best cosmetic outcome.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    What to avoid after fillers treatment?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div style="padding: 20px;">
+                      <p>Here are some general guidelines to follow after getting dermal fillers:</p>
+                      
+                      <ol>
+                      <li>
+                      <p>It is important to avoid activities that increase blood flow to the treated area, such as exercise and heavy lifting, for at least 24-48 hours after treatment. This will help reduce swelling and minimize the risk of bruising.</p>
+                      </li>
+                      <li>
+                      <p>Exposure to heat, such as hot showers and saunas, can cause swelling and irritation to the treated area. It is also important to protect your skin from the sun by wearing a hat and sunscreen with a high SPF.</p>
+                      </li>
+                      <li>
+                      <p>It is important to avoid touching or massaging the treated area for at least 24 hours after treatment. This can help prevent the filler from moving or spreading to unintended areas.</p>
+                      </li>
+                      <li>
+                      <p>It is recommended to avoid alcohol and blood thinners, such as aspirin and ibuprofen, for at least 24 hours after treatment. These substances can increase the risk of bruising and bleeding.</p>
+                      </li>
+                      </ol>
+                     </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    At what age should you start getting fillers?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div style="padding: 20px;">
+                      <p style="margin: 0;"><span>There is no specific age at which people should start getting dermal fillers. The decision to get dermal fillers is a personal one that should be based on an individual's goals and concerns. Some people may choose to get dermal fillers in their 20s or 30s to help prevent the signs of aging, while others may not be interested in getting dermal fillers until they are in their 50s or 60s.</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    What are fillers made with?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div style="padding: 20px;">
+                      <p style="margin: 0;"></p><p>They are made with a variety of products such as: hyaluronic acid, calcium hydroxylapatite, and poly-L-lactic acid.</p>
+                      <ul>
+                      <li>Hyaluronic acid is a naturally occurring substance that is found in the skin, joints, and eyes. It is a popular ingredient in dermal fillers because it has the ability to hold onto water, which helps to plump up the skin and smooth out wrinkles.</li>
+                      <li>Calcium hydroxylapatite is often used to augment and to add facial volume to restore volume loss.</li>
+                      <li>Poly-L-lactic acid is biocompatible with the human body. It is often used in dermal fillers to stimulate collagen production, which helps to improve the texture and elasticity of the skin.</li>
+                      </ul>
+                      <p>It is important to note that dermal fillers are medical products that should only be administered by qualified healthcare professionals.</p><p></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    Which Dermal Filler do I need?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div style="padding: 20px;">
+                      <p style="margin: 0;"></p><p>There are several different types of dermal fillers and the best one for you will depend on your individual goals and concerns.</p>
+                      <p>Hyaluronic acid fillers are often used to treat lips and smooth out smokers line. These are a couple of popular brands: Juvederm, Restylane, RHA and Versa.</p>
+                      <p>Calcium hydroxylapatite fillers such as Radiesse, adds volume to the cheeks improving and lifting the mid-face area.</p>
+                      <p>Poly-L-lactic acid filler (Sculptra) is also used to restore volume and stimulate the formation of collagen improving skin texture and elasticity.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+            
+            <!-- end regular accordion -->
+            <!-- start mobile accordion -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="accordion" class="blue-bck" style="padding:0px 0 30px">
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-12">
+            <div class="mobile-only">
+              <h2 class="heading mob-head heading-toggle">
+                Fillers Frequently<br> Asked Questions
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="accordion" style="padding:0px 0 30px">
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-12">
+            <div class="mobile-only">
+              <div class="all-questions-mob">
+                <div class="accordion">
+                    <div class="question">
+                        <div class="question-title">
+                          Which dermal fillers last longest?
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div>
+                            <div>
+                              <p>Hyaluronic acid fillers, such as Restylane and Juvederm, tend to 10 months to a year. Calcium hydroxylapatite fillers, such as Radiesse, generally last longer, up to two years. Poly-L-lactic acid fillers, such as Sculptra, also tend to last longer, up to two years or more.</p>
+                              <p>It's important to note that dermal fillers duration can vary from person to person, contributing factors are: patient metabolism, treated area, type of filler, and the amount of product used. Therefore results can never be guaranteed.</p>
+                              <p>We recommend each patient to discuss their treatment goals with a qualified practitioner and to carefully consider the pros and cons of different dermal filler products before making a decision.</p>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          What does a dermal filler do?
+                          <div class="plus-minus"></div>
+                          </div>
+                        <div class="question-content">
+                          <div>
+                            <p>Dermal fillers are injectable products that restore volume loss and smooth out facial fine lines and wrinkles. Dermal fillers are made of various substances such as: hyaluronic acid, calcium hydroxylapatite, and poly-L-lactic acid.</p>
+                            <p>Dermal fillers are typically used to:</p>
+                            <ul>
+                              <li>Plump thin lips</li>
+                              <li>Restore volume loss</li>
+                              <li>Erase or soften facial creases and wrinkles</li>
+                              <li>Improve the appearance of recessed scars</li>
+                              <li>Increase collagen production</li>
+                              </ul>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          Are dermal fillers Better than Botox?
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div>
+                            <p>Both dermal fillers and Botox are popular non-surgical treatments that are used to correct or improve the signs of aging. Both products work very differently and serve a different purpose.</p>
+                            <p>Dermal fillers are injectable products that are used to restore volume loss but also to erase or smooth out fine lines and wrinkles.</p>
+                            <p>Botox on the other hand is a treatment that prevents the formation of fine lines and wrinkles by relaxing the strong contraction of expression lines. Botox is typically used to smooth out dynamic wrinkles that are caused by muscle movements, such as frown lines, forehead wrinkles, and crow's feet.</p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          
+                          What are the side effects of dermal fillers?
+                          
+                          <div class="plus-minus"></div>
+                        </div>
+                          <div class="question-content">
+                            <div style="padding: 20px;">
+                              <p style="margin: 0;"></p><p>Common side effects of dermal fillers are:</p>
+                                <ol>
+                                <li>
+                                <p>Swelling: This is the most common side effect and usually goes away within a few days.</p>
+                                </li>
+                                <li>
+                                <p>Bruising: Dermal fillers may cause bruising at the injection site, which usually disappears within a week or two.</p>
+                                </li>
+                                <li>
+                                <p>Pain or discomfort: Some people may experience pain or discomfort at the injection site, which can usually be managed with over-the-counter pain medications.</p>
+                                </li>
+                                <li>
+                                <p>Redness or irritation: The skin around the injection site may become red or irritated, but this should resolve within a few days.</p>
+                                </li>
+                                <li>
+                                <p>Lumps or bumps: It is possible for dermal fillers to cause lumps or bumps under the skin, but these can usually be massaged or treated with a hyaluronidase injection to dissolve the filler.</p>
+                                </li>
+                                <li>
+                                <p>Allergic reactions: Rarely, people may have an allergic reaction to the ingredients in dermal fillers, which can cause symptoms such as hives, rash, itching, or difficulty breathing.</p>
+                                </li>
+                                </ol>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          
+                          What happens when you stop getting fillers?
+                          
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div style="padding: 20px;">
+                            <p>If you stop getting dermal fillers, the results will gradually fade over time as the product is absorbed by the body. The rate at which the results lasts depends on the specific product, skin type and lifestyle.</p>
+                            <p>It is important to note that dermal fillers are not a permanent solution. Please discuss your treatment plan and goals with a qualified experienced practitioner to determine the best cosmetic outcome.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          
+                          What to avoid after fillers treatment?
+                          
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div style="padding: 20px;">
+                            <p>Here are some general guidelines to follow after getting dermal fillers:</p>
+                            
+                            <ol>
+                            <li>
+                            <p>It is important to avoid activities that increase blood flow to the treated area, such as exercise and heavy lifting, for at least 24-48 hours after treatment. This will help reduce swelling and minimize the risk of bruising.</p>
+                            </li>
+                            <li>
+                            <p>Exposure to heat, such as hot showers and saunas, can cause swelling and irritation to the treated area. It is also important to protect your skin from the sun by wearing a hat and sunscreen with a high SPF.</p>
+                            </li>
+                            <li>
+                            <p>It is important to avoid touching or massaging the treated area for at least 24 hours after treatment. This can help prevent the filler from moving or spreading to unintended areas.</p>
+                            </li>
+                            <li>
+                            <p>It is recommended to avoid alcohol and blood thinners, such as aspirin and ibuprofen, for at least 24 hours after treatment. These substances can increase the risk of bruising and bleeding.</p>
+                            </li>
+                            </ol>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          
+                          At what age should you start getting fillers?
+                          
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div style="padding: 20px;">
+                            <p style="margin: 0;"><span>There is no specific age at which people should start getting dermal fillers. The decision to get dermal fillers is a personal one that should be based on an individual's goals and concerns. Some people may choose to get dermal fillers in their 20s or 30s to help prevent the signs of aging, while others may not be interested in getting dermal fillers until they are in their 50s or 60s.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          
+                          What are fillers made with?
+                          
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div style="padding: 20px;">
+                            <p style="margin: 0;"></p><p>They are made with a variety of products such as: hyaluronic acid, calcium hydroxylapatite, and poly-L-lactic acid.</p>
+                            <ul>
+                            <li>Hyaluronic acid is a naturally occurring substance that is found in the skin, joints, and eyes. It is a popular ingredient in dermal fillers because it has the ability to hold onto water, which helps to plump up the skin and smooth out wrinkles.</li>
+                            <li>Calcium hydroxylapatite is often used to augment and to add facial volume to restore volume loss.</li>
+                            <li>Poly-L-lactic acid is biocompatible with the human body. It is often used in dermal fillers to stimulate collagen production, which helps to improve the texture and elasticity of the skin.</li>
+                            </ul>
+                            <p>It is important to note that dermal fillers are medical products that should only be administered by qualified healthcare professionals.</p><p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question">
+                        <div class="question-title">
+                          
+                          Which Dermal Filler do I need?
+                          
+                          <div class="plus-minus"></div>
+                        </div>
+                        <div class="question-content">
+                          <div style="padding: 20px;">
+                            <p style="margin: 0;"></p><p>There are several different types of dermal fillers and the best one for you will depend on your individual goals and concerns.</p>
+                            <p>Hyaluronic acid fillers are often used to treat lips and smooth out smokers line. These are a couple of popular brands: Juvederm, Restylane, RHA and Versa.</p>
+                            <p>Calcium hydroxylapatite fillers such as Radiesse, adds volume to the cheeks improving and lifting the mid-face area.</p>
+                            <p>Poly-L-lactic acid filler (Sculptra) is also used to restore volume and stimulate the formation of collagen improving skin texture and elasticity.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              
+            </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+    <script>
+    
+    const headingToggle = document.querySelector('.heading-toggle');
+    const allQuestions = document.querySelector('.all-questions-mob');
+  
+    headingToggle.addEventListener('click', function(e){
+          console.log('sup');
+          headingToggle.classList.toggle('active-toggle');
+          allQuestions.classList.toggle('active');
+          if(allQuestions.classList.contains('active')){
+            allQuestions.style.maxHeight = "fit-content";
+          } else{
+              allQuestions.style.maxHeight = 0;
+          }
+    });
+  
+  
+      // Get all question elements
+    var questions = document.getElementsByClassName('question');
+    
+    // Add click event listener to each question
+    for (var i = 0; i < questions.length; i++) {
+      questions[i].addEventListener('click', function() {
+        // Toggle active class on the clicked question
+        this.classList.toggle('active');
+    
+        // Close other open questions
+        for (var j = 0; j < questions.length; j++) {
+          if (questions[j] !== this) {
+            questions[j].classList.remove('active');
+          }
+        }
+      });
+    }
+  
+  
+  
+    </script>

@@ -1,137 +1,159 @@
 <!-- menu custom -->
 <style>
-    .phone-number-info{
-      
+  .phone-number-info {}
+
+  .phone-number-info:before {
+    position: relative;
+    left: -11px;
+    right: 0;
+    top: 10px;
+    content: url(https://www.allureplasticsurgery.com/wp-content/uploads/2018/08/phonelogo.png);
+  }
+
+  @media screen and (max-width: 768px) {
+    .phone_number {
+      text-align: right;
+      display: block !important;
     }
-    .phone-number-info:before {
-      position: relative;
-      left: -11px;
-      right: 0;
-      top: 10px;
-      content: url(https://www.allureplasticsurgery.com/wp-content/uploads/2018/08/phonelogo.png);
+
+    .phone_number a {
+      color: #fff !important;
+      padding: 10px;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      margin-left: 8px;
+      display: block;
     }
-    @media screen and (max-width: 768px){
-      .phone_number {
-        text-align: right;
-        display: block!important;
-      }
-      .phone_number a {
-        color: #fff!important;
-        padding: 10px;
-        font-family: 'Lato', sans-serif;
-        font-size: 18px;
-        margin-left: 8px;
-        display: block;
-    }
+
     .wp-custom-logo .title-area {
       max-width: 130px !important;
       padding-bottom: 10px;
       padding-top: 5px !important;
-      width: 50%!important;
+      width: 50% !important;
     }
+
     .add_color .phone_number {
-      position: unset!important;
+      position: unset !important;
       right: unset;
       margin-top: unset;
       margin-bottom: unset;
       display: block;
     }
   }
-   /* top lp */
-   #top-lp{
-        padding: 60px 0 15px;
-        background: white;
-    }
-    #top-lp .col-12{
-      margin-top: 60px;
-    }
-	#top-lp .vc_row-no-padding{
-		background-color: white;
-        
-	}
+
+  /* top lp */
+  #top-lp {
+    padding: 60px 0 15px;
+    background: white;
+  }
+
+  #top-lp .col-12 {
+    margin-top: 60px;
+  }
+
+  #top-lp .vc_row-no-padding {
+    background-color: white;
+
+  }
+
   .hl_form-builder--main {
     margin-top: -25px;
-    padding: 0px 20px!important;
+    padding: 0px 20px !important;
+  }
+
+  #top-lp h2 {
+    font-size: 42px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-top: 40px;
 }
-    #top-lp h2{
-        font-size: 34px;
-        font-weight: 500;
-        padding-bottom: 10px;
-        margin-top: 30px;
-    }
-    #top-lp .txt-bubble {
+
+  #top-lp .txt-bubble {
     padding: 15px;
     /* border: #000 solid 1px; */
     /* border-radius: 12px; */
     max-width: 92%;
     margin: 0 auto 0 0;
     background: #e8e8e8;
-}
-	#top-lp .txt-bubble h3{
-        text-align: left;
+  }
+
+  #top-lp .txt-bubble h3 {
+    text-align: left;
     text-transform: unset;
     font-size: 17.5px;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	}
-	#top-lp .txt-bubble h3 span{
-        color: #438Db1;
-        font-weight: bold;
-        font-size: 24px;
-	}
-    #top-lp .lp-form-cont{
-        background: #e8e8e8;
-        padding: 15px 20px;
-			  border-radius:0 0 20px 20px;
-        height: 100%;
-    }
-    #top-lp .img-cont{
-        padding: 25px 0 5px;
-			  line-height:1;
-    }
-    #top-lp .filler-brands{
-        max-width: 100%;
-    }
-    #top-lp .list-cont{
-        
-    }
-    #top-lp .list-cont .list{
-        padding-top: 15px;
-    }
-    #top-lp .list-cont .list li{
-        padding-top: 8px;
-    }
-    #top-lp .promo-title{
-			text-align: center;
-			margin-top: 0;
-			margin-bottom:0px;
-			font-weight: 700;
-			background-color: #4baccb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  #top-lp .txt-bubble h3 span {
+    color: #438Db1;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  #top-lp .lp-form-cont {
+    background: #e8e8e8;
+    padding: 0px 20px;
+    border-radius: 0 0 20px 20px;
+    height: 100%;
+  }
+
+  #top-lp .img-cont {
+    padding: 25px 0 5px;
+    line-height: 1;
+  }
+
+  #top-lp .filler-brands {
+    max-width: 100%;
+  }
+
+  #top-lp .list-cont {}
+
+  #top-lp .list-cont .list {
+    padding-top: 15px;
+  }
+
+  #top-lp .list-cont .list li {
+    padding-top: 8px;
+  }
+
+  #top-lp .promo-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-weight: 700;
+    background-color: #4baccb;
     border-radius: 20px 20px 0 0;
-			color:#fff;
-			padding:10px;
-    }
-    #top-lp label{
-		color: #fff;
-    float:none;    
-	}
-    #top-lp textarea{
-		color: #fff;
+    color: #fff;
+    padding: 10px;
+  }
+
+  #top-lp label {
+    color: #fff;
+    float: none;
+  }
+
+  #top-lp textarea {
+    color: #fff;
     border: 1px solid #fff;
     margin-bottom: 0;
     min-height: 200px;
-	}
-    #top-lp input::placeholder{
-		color: transparent;
-	}
-    #top-lp .wpcf7 input[type=text], #top-lp .wpcf7 input[type=email]{
-		color: #000;
-        border: 1px solid #4baccb;
-			  padding:5px;
-        margin-bottom: 10px;
-			  background:#fff;
-			  border-radius:15px;
-	}
-#top-lp input.wpcf7-form-control.wpcf7-submit {
+  }
+
+  #top-lp input::placeholder {
+    color: transparent;
+  }
+
+  #top-lp .wpcf7 input[type=text],
+  #top-lp .wpcf7 input[type=email] {
+    color: #000;
+    border: 1px solid #4baccb;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 15px;
+  }
+
+  #top-lp input.wpcf7-form-control.wpcf7-submit {
     background: #4baccb;
     border: 1px solid #fff;
     color: #fff;
@@ -143,131 +165,124 @@
     border-radius: 25px;
     padding: 14px 70px;
     font-size: 20px;
-}
-.form-p{
-	color:#000;
-}
-.mobile-only-form{
-  display: none;
-}
-.list-cont p{
-  line-height: 1.5;
-}
-@media(max-width:767px){
-  #top-lp .txt-bubble {
-    padding: 15px;
-    /* border: #000 solid 1px; */
-    /* border-radius: 12px; */
-    max-width: 100%;
-    margin: 0 auto 0 0;
-    background: #e8e8e8;
-}
-  #top-lp .lp-form-cont{
-        background: #e8e8e8;
-        padding: 0px;
-			  border-radius:0 0 20px 20px;
-        height: 705px;
-    }
-	#top-lp .promo-title{
-			font-size:28px;
-    }
-	#top-lp input.wpcf7-form-control.wpcf7-submit {
-    background: #4baccb;
-    border: 1px solid #fff;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    display: block;
-    margin: 20px auto 0;
-    border-radius: 25px;
-    padding: 14px 50px;
+  }
+
+  .form-p {
+    color: #000;
+  }
+
+  .mobile-only-form {
+    display: none;
+  }
+
+  .list-cont p {
+    line-height: 1.5;
     font-size: 18px;
-}
-#top-lp h1{
-  margin-top: 20px;
-}
-}
+    padding-top: 25px;
+  }
+
+  @media(max-width:767px) {
+    #top-lp .txt-bubble {
+      padding: 15px;
+      /* border: #000 solid 1px; */
+      /* border-radius: 12px; */
+      max-width: 100%;
+      margin: 0 auto 0 0;
+      background: #e8e8e8;
+    }
+
+    #top-lp .lp-form-cont {
+      background: #e8e8e8;
+      padding: 0px;
+      border-radius: 0 0 20px 20px;
+      height: 1100px;
+    }
+
+    #top-lp .promo-title {
+      font-size: 28px;
+    }
+
+    #top-lp input.wpcf7-form-control.wpcf7-submit {
+      background: #4baccb;
+      border: 1px solid #fff;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      display: block;
+      margin: 20px auto 0;
+      border-radius: 25px;
+      padding: 14px 50px;
+      font-size: 18px;
+    }
+
+    #top-lp h1 {
+      margin-top: 20px;
+    }
+  }
   </style>
 
   
-  
-  
   <section id="top-lp">
-      <div class="container">
-          <div class="row">
-                          <div class="col-12" style="padding:15px 0; text-align:center">
-                            <h1 style="font-size:30px;">NEW EAR RESHAPING PROCEDURE </h1>
-                          </div>
-              <div class="col-md-6">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" style="padding:15px 0; text-align:center">
+          <h1 style="font-size:30px;">NEW EAR RESHAPING PROCEDURE </h1>
+        </div>
+        <div class="col-md-6">
           <h2 class="promo-title mobile-only-form">FREE AESTHETICS CONSULTATION!</h2>
-                  <div class="txt-bubble">
-                      <h3>
-                          <span> NO APPOINTMENTS NEEDED</span><br>
-                          From Tuesday - Friday from 8:30 am to 5:00 pm
-                      </h3>
-                  </div>
+          <div class="txt-bubble">
+            <h3>
+              <span> NO APPOINTMENTS NEEDED</span><br>
+              From Tuesday - Friday from 8:30 am to 5:00 pm
+            </h3>
+          </div>
           <div class="img-cont">
-              <video width="100%" height="320" poster="https://www.allureplasticsurgery.com/wp-content/uploads/2023/08/vid-thumb-botox.webp" controls>
-                  <source src="https://www.allureplasticsurgery.com/wp-content/uploads/2023/08/know-more-about-Botox-Dysport-Xeomin-Daxxify-Jeuveau-with-our-FREE-consultation.-dZylkMX0O9c.mp4" type="video/mp4">
-                  <source src="https://www.allureplasticsurgery.com/wp-content/uploads/2023/08/know-more-about-Botox-Dysport-Xeomin-Daxxify-Jeuveau-with-our-FREE-consultation.-dZylkMX0O9c.mp4" type="video/mp4">
-    
-              </video>
+            <video width="100%" height="320"
+              poster="https://www.allureplasticsurgery.com/wp-content/uploads/2023/08/vid-thumb-botox.webp" controls>
+              <source
+                src="https://www.allureplasticsurgery.com/wp-content/uploads/2023/08/know-more-about-Botox-Dysport-Xeomin-Daxxify-Jeuveau-with-our-FREE-consultation.-dZylkMX0O9c.mp4"
+                type="video/mp4">
+              <source
+                src="https://www.allureplasticsurgery.com/wp-content/uploads/2023/08/know-more-about-Botox-Dysport-Xeomin-Daxxify-Jeuveau-with-our-FREE-consultation.-dZylkMX0O9c.mp4"
+                type="video/mp4">
+  
+            </video>
           </div>
           <div class="mobile-only-form">
             <h2 class="promo-title desktop-only-form">$50 OFF on your first<br> BOTOX treatment</h2>
             <div class="lp-form-cont">
-              <iframe
-              src="https://api.leadconnectorhq.com/widget/form/ADeJIkzmkW1pbpMtl6pM"
-              style="width:100%;height:100%;border:none;border-radius:20px"
-              id="inline-ADeJIkzmkW1pbpMtl6pM" 
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Landing Page V1"
-              data-height="705"
-              data-layout-iframe-id="inline-ADeJIkzmkW1pbpMtl6pM"
-              data-form-id="ADeJIkzmkW1pbpMtl6pM"
-              title="Landing Page V1"
-                  >
-            </iframe>
+              <iframe src="https://api.leadconnectorhq.com/widget/form/ADeJIkzmkW1pbpMtl6pM"
+                style="width:100%;height:100%;border:none;border-radius:20px" id="inline-ADeJIkzmkW1pbpMtl6pM"
+                data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+                data-deactivation-value="" data-form-name="Landing Page V1" data-height="705"
+                data-layout-iframe-id="inline-ADeJIkzmkW1pbpMtl6pM" data-form-id="ADeJIkzmkW1pbpMtl6pM"
+                title="Landing Page V1">
+              </iframe>
             </div>
           </div>
           <div class="list-cont">
-              <h2>
-                Incisionless Otoplasty or Ear Pinning Without Surgery!
-              </h2>
-              <p>Otoplasty is the medical term for outer ear surgery or reshaping which generally involves general anesthesia, cutting, long recovery, pain, Keloid, possible complications, etc. However, for the first in Florida history, the Allure Institute for Plastic Surgery medical team can provide a non-surgical alternative to permanently fix prominent ears.</p>
+            <h2>
+              Exclusive Ear Reshape Procedure
+            </h2>
+            <p>NO MORE BIG EARS! Allure Institute for Plastic Surgery is introducing a New & Exclusive Nonsurgical Otoplasty procedure. Otoplasty is the medical term for the outer Ear Surgery or reshaping which generally involves general anesthesia, cutting, long recovery, pain, Keloid, possible complications, etc. However, for the first in Florida history the Allure Institute for Plastic Surgery medical team can provide a non-surgical alternative to permanently fix prominent ears.</p>
           </div>
-              </div>
-              <div class="col-md-6 desktop-only-form">
+        </div>
+        <div class="col-md-6 desktop-only-form">
   
-          <h2 class="promo-title">Get Current Promotions</h2>
-                  <div class="lp-form-cont">
-                    <iframe
-              src="https://api.leadconnectorhq.com/widget/form/ADeJIkzmkW1pbpMtl6pM"
-              style="width:100%;height:100%;border:none;border-radius:20px"
-              id="inline-ADeJIkzmkW1pbpMtl6pM" 
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Landing Page V1"
-              data-height="705"
-              data-layout-iframe-id="inline-ADeJIkzmkW1pbpMtl6pM"
-              data-form-id="ADeJIkzmkW1pbpMtl6pM"
-              title="Landing Page V1"
-                  >
+          <h2 class="promo-title">Fill out the form</h2>
+          <div class="lp-form-cont">
+            <iframe src="https://api.leadconnectorhq.com/widget/form/ADeJIkzmkW1pbpMtl6pM"
+              style="width:100%;height:100%;border:none;border-radius:20px" id="inline-ADeJIkzmkW1pbpMtl6pM"
+              data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+              data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+              data-deactivation-value="" data-form-name="Landing Page V1" data-height="705"
+              data-layout-iframe-id="inline-ADeJIkzmkW1pbpMtl6pM" data-form-id="ADeJIkzmkW1pbpMtl6pM"
+              title="Landing Page V1">
             </iframe>
-                  </div>
-              </div>
           </div>
+        </div>
       </div>
+    </div>
   </section>
