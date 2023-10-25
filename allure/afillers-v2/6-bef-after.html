@@ -1,125 +1,244 @@
 <style>
-    #bf-af-gal{
-        padding: 0px 0 60px;
+    #slider-botox {
+        padding: 10px 0 60px;
     }
-    #bf-af-gal img{
-        max-width: 100%;
-    }
-    #bf-af-gal{}
-    #bf-af-gal h2 {
-        color: #2e4062;
-        font-family: "Playfair Display";
-        font-size: 42px;
-        margin-bottom: 15px;
+
+    #slider-botox h2 {
         text-align: center;
-    }
-    #bf-af-gal .item-25{
-        flex: 0 0 24%;
-        max-width: 24%;
-        border-radius: 15px;
-    }
-    #bf-af-gal .resp-pad{
-        padding: 15px 0;
-    }
-    #bf-af-gal .item-33{
-        flex: 0 0 32%;
-        max-width: 32%;
-        border-radius: 15px;
-    }
-    #bf-af-gal{}
-    #bf-af-gal{}
-    .justify-content-between{
-        justify-content: space-between;
-    }
-      .text-align-center{
-        text-align:center;
-      }
-      #bf-af-gal .trans-blue-btn {
-        padding: 15px 15px 15px 15px;
-        border: 2px solid #8bb4b0;
-        color: #fff !important;
-        font-size: 20px;
+        font-size: 43px;
         font-weight: 700;
-        background: #8bb4b0;
-        border-radius: 50px;
+        font-family: "Playfair Display";
+        margin-bottom: 30px;
+    }
+
+    #slider-botox h2 span {}
+
+    #slider-botox p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #slider-botox {
+        background: #fff;
+    }
+
+    #slider-botox button {
+        border: none !important;
+        font-size: 80px;
+        background: transparent;
+        color: #000;
+    }
+
+    .carousel-border {
+        border-radius: 10px;
+    }
+
+    #slider-botox .owl-nav {
         position: relative;
-        transition: 0.3s ease-out;
+        text-align: unset;
     }
-      #bf-af-gal p{
-        font-size:22px;
-      }
-      .mt-btn{
-        margin-top:30px;
-      }
-      @media(max-width:767px){
-        #bf-af-gal .item-25{
-        flex: 0 0 100%;
-        max-width: 100%;
-        border-radius: 15px;
+
+    #slider-botox .arrow-prev {
+        position: absolute;
+        top: -205px;
+        left: -55px;
     }
-      #bf-af-gal .item-33{
-          flex: 0 0 100%;
-          max-width: 100%;
-          border-radius: 15px;
-      }
-      }
-    </style>
-    <section id="bf-af-gal">
+
+    #slider-botox .arrow-next {
+        position: absolute;
+        top: -205px;
+        right: -55px;
+    }
+
+    .square-blue-btn {
+        color: #fff;
+        background-color: #198fb5 !important;
+        padding: 15px 20px;
+    }
+
+    @media (max-width: 450px) {
+        .carousel-section.before {
+            padding: 0px 0 30px !important;
+        }
+
+        #slider-botox .owl-item.active {}
+
+        #slider-botox h2 {
+            margin-top: 10px;
+            font-size: 34px;
+        }
+
+        #slider-botox .item h4 {
+            display: none;
+        }
+
+        #slider-botox .owl-nav {
+            text-align: center;
+        }
+
+        #slider-botox .owl-nav {
+            text-align: center;
+            display: block;
+        }
+
+        #slider-botox .arrow-prev {
+            position: unset;
+            display: none;
+        }
+
+        #slider-botox button {
+            border: none !important;
+            font-size: 0 !important;
+            background: transparent;
+            color: #000;
+        }
+
+        #slider-botox button::after {
+            background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/10/icono-flecha.png');
+            content: "";
+            width: 40px;
+            height: 40px;
+            display: block;
+            background-size: contain;
+            position: relative;
+            top: -10px;
+            cursor: pointer;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #slider-botox .arrow-next {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            right: unset;
+        }
+        .resp-p-slide{
+            padding-top: 70px;
+        }
+    }
+</style>
+<section id="slider-botox" class="carousel-section before">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2>Before and After</h2>
-    
+
             </div>
-           
-        </div>
-        <div class="row justify-content-between">
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/1.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/2.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/3.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/4.webp" alt="">
-            </div>
-            <div class="item-33 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/5.webp" alt="">
-            </div>
-            <div class="item-33 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/6.webp" alt="">
-            </div>
-            <div class="item-33 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/7.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/8.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/9.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/10.webp" alt="">
-            </div>
-            <div class="item-25 resp-pad">
-                <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/11.webp" alt="">
-            </div>
+
         </div>
         <div class="row">
+            <div class="col-12">
+                <div class="after-before-carousel owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-1.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-2.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-3.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-4.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-5.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-6.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-7.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-8.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-9.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-10.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-11.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+                    <div class="item">
+                        <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/10/slide-fil-1-12.webp"
+                            loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row resp-p-slide">
             <div class="col-12 text-align-center">
-            <p>
-              *individual results may vary
-            </p>
-            <div class="btn-cont side-by-side mt-btn">
-              <a class="trans-blue-btn" href="#form-v3">
-              Schedule a Consultation
-              </a>
-              </div>
-          </div>  
-          </div>
-    </div>
-    </section>
-    
+                <p>
+                    *individual results may vary
+                </p>
+                <div class="btn-cont side-by-side mt-btn">
+                    <a class="square-blue-btn" href="#form-v3">
+                        Schedule a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    setTimeout(() => { }, "2000");
+    $(document).ready(function () {
+        $(".after-before-carousel").owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            navClass: ["arrow arrow-prev", "arrow arrow-next"],
+            responsive: {
+                0: {
+                    items: 1,
+                    slideBy: 1,
+                },
+                768: {
+                    items: 1,
+                },
+                992: {
+                    items: 3,
+                },
+                1500: {
+                    items: 4,
+                },
+                2500: {
+                    items: 4,
+                },
+            },
+        });
+    });
+</script>

@@ -15,7 +15,8 @@ const getPlayerChoice = function() {
   console.log(selection);
   if (selection !== ROCK && selection !== PAPER && selection !== SCISSORS) {
     alert("Not a valid choice. We chose rock for you");
-    return DEFAULT_USER_CHOICE;
+    return;
+    // return DEFAULT_USER_CHOICE;
   } 
     return selection;
   
@@ -32,7 +33,7 @@ const getComputerChoice = () => {
   }
 }
 
-const getWinner = (cChoice, pChoice) => {
+const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) => {
   if(pChoice === cChoice){
     return RESULT_DRAW;
   } else if(pChoice === ROCK && cChoice === PAPER ||
@@ -52,11 +53,18 @@ startGameBtn.addEventListener("click", function() {
   gameIsRunning = true;
   const playerSelection = getPlayerChoice();
   const computerSelection = getComputerChoice();
+  let winner;
+  if(playerSelection){
+    winner = getWinner(computerSelection, playerSelection);
+  } else {
+    winner = getWinner(computerSelection, playerSelection);
+  }
+
   console.log("the players selection is " + playerSelection);
   
   console.log("the computer's selection is " + computerSelection);
-  const winner = getWinner(computerSelection, playerSelection);
-  let message = `You picked ${playerSelection}, the computer picked ${computerSelection}, therefore `;
+
+  let message = `You picked ${playerSelection || DEFAULT_USER_CHOICE}, the computer picked ${computerSelection}, therefore `;
   if(winner === RESULT_DRAW){
     message = message + "it's a draw.";
   } else if(winner === RESULT_PLAYER_WINS){
@@ -70,6 +78,17 @@ startGameBtn.addEventListener("click", function() {
 });
 
 
+const sumUp = (numbers) => {
+  let sum = 0;
+  for(const num of numbers){
+    sum = sum + num;
+  }
+  return sum;
+}
+
+
+
+console.log(sumUp([2, 3, 4]));
 
 // const getPlayerChoice = function() {
 //   const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, '').toUpperCase();

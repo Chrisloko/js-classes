@@ -380,19 +380,37 @@
     const tabPanes = document.querySelectorAll(".tab-pane");
 
     tabButtons.forEach((button, index) => {
-      button.addEventListener('click', function(){
-        tabButtons.forEach( tab => {
-          tab.classList.remove("active");
-        });
-        button.classList.add("active");
+      button.addEventListener('click', function(e){
+        tabButtons.forEach((tab) => {
+          tab.classList.remove('active');
+        }); 
+        button.classList.add('active');
 
-        tabPanes.forEach(tabPane => {
-          tabPane.classList.remove("active");
-        });
+        tabPanes.forEach((tab) => {
+          tab.classList.remove('active');
+        }); 
         tabPanes[index].classList.add('active');
-
       });
     });
+
+
+
+
+
+    // tabButtons.forEach((button, index) => {
+    //   button.addEventListener('click', function(){
+    //     tabButtons.forEach( tab => {
+    //       tab.classList.remove("active");
+    //     });
+    //     button.classList.add("active");
+
+    //     tabPanes.forEach(tabPane => {
+    //       tabPane.classList.remove("active");
+    //     });
+    //     tabPanes[index].classList.add('active');
+
+    //   });
+    // });
 
     // for(let i = 0; i < tabButtons.length; i++){
     //   tabButtons[i].addEventListener('click', function(){
@@ -412,7 +430,17 @@
     // }
 
 
+    // let iterable = [10, 20, 30];
+    
+    // for (let value of iterable) {
+    //    console.log(value);
+    // }
 
+    // let iterable2 = [10, 20, 30];
+
+    // iterable2.forEach((val) => {
+    //   console.log(val);
+    // })
 
 
 
