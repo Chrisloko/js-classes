@@ -14,13 +14,21 @@ const cartRow = document.querySelectorAll(".cart-row");
 
 
 
-for(let i = 0; i<removeCartItemButtons.length; i++){
-    removeCartItemButtons[i].addEventListener('click', function(e){
-        // var buttonClicked = e.target;
-       e.target.parentElement.parentElement.remove();
-       updateCartTotal();
+// for(let i = 0; i<removeCartItemButtons.length; i++){
+//     removeCartItemButtons[i].addEventListener('click', function(e){
+//         // var buttonClicked = e.target;
+//        e.target.parentElement.parentElement.remove();
+//        updateCartTotal();
+//     })
+// }
+
+for(const button of removeCartItemButtons){
+    button.addEventListener('click', function(e){
+        e.target.parentElement.parentElement.remove();
+        updateCartTotal();
     })
 }
+
 
 function updateCartTotal(){
     let cartItemContainer = document.getElementsByClassName('cart-items' )[0];
