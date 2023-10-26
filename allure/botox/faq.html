@@ -1,0 +1,411 @@
+<!-- chat accordion  2-->
+
+
+
+<style>
+  .question-title {
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px 20px;
+    width: 100%;
+    font: inherit;
+    font-weight: 600;
+    color: #666;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    font-size: 19px;
+  }
+  
+  .question-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    
+  }
+  #accordion h2{
+    margin-top: 30px;
+  }
+  .question-content>div {
+    padding: 20px;
+  }
+  
+  .question.active .question-title {
+    /* color: blue; */
+  }
+  
+  .question.active .question-content {
+    max-height: 1000px; /* Adjust this value to accommodate your content */
+  }
+  #accordion .plus-minus {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/plus-1.jpg');
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+}
+#accordion .question.active .plus-minus {
+    background-image:url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/minus-1.jpg');
+  }
+  .mobile-only{
+    display: none;
+  }
+  .all-questions-mob{
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    max-height: 0;
+  }
+  .heading{
+    border-bottom: 1px #198fb5 solid;
+    padding-bottom: 10px;
+  }
+  .heading-toggle::after {
+    content: "";
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    transition: 0.3s ease;
+    background-image: url('https://allure.rodcesar.com/wp-content/uploads/2023/07/down-arrow.png');
+    width: 40px;
+    height: 26px;
+    background-size: cover;
+    top: 50%;
+  }
+  .heading-toggle.active-toggle::after {
+    content: "";
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+  }
+  .mob-head{
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .accor-desk{
+     padding:0px 0 0px
+   }
+  @media(max-width:767px){
+    #accordion-gpt .vc_column-inner{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .blue-bck{
+      background: #438DB1;
+    }
+    .desk-only{
+      display: none;
+    }
+    .mobile-only{
+      display: block;
+    }
+  }
+  </style>
+  <div id="accordion" class="accor-desk" style="">
+    <!-- Accordion -->
+  <div class="container">
+    <div class="row w-100">
+      <div class="col-12">
+        
+        <!-- regular accordion -->
+        <div class="desk-only">
+            <h2 class="heading">
+              Botox® Frequently Asked Questions
+            </h2>
+            <div class="accordion">
+              <div class="question">
+                <div class="question-title">
+                  What is Botox?
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    It is a non-surgical aesthetic treatment made to relax musculature, extremely safe, and approved by the FDA to prevent and reduce fine lines/ wrinkles. 
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  Is Botox bad for you?
+                  <div class="plus-minus"></div>
+                  </div>
+                <div class="question-content">
+                  <div>
+                    No, absolutely not. We highly recommend the selection of a clinic that purchases its products only from an approved FDA wholesaler.
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  At what age can I start Botox treatment?
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    The correct age is when lines and wrinkles are beginning to be permanently visible during no facial expression. Youthful confidence awaits at the best MedSpa in Palm Beach.
+                  </div> 
+              </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  
+                 After Botox treatment, am I going to look natural?
+                  
+                  <div class="plus-minus"></div>
+                </div>
+                  <div class="question-content">
+                  <div>
+                    Yes, absolutely. However, we highly recommend the selection of a trained and experienced practitioner to achieve the best cosmetic outcome. Transform your appearance and reveal your best self.
+                  </div> 
+                </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  
+                  What areas can I treat with BOTOX?
+                  
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    <ul>
+                      <li>Frown Lines</li>
+                      <li>Forehead Lines</li>
+                      <li>Crows Feet</li>
+                      <li>Smoker Lip Lines</li>
+                      <li>Gummy Smile</li>
+                      <li>Masseter- Bruxism</li>
+                      <li>DAO</li>
+                      <li>Mentalis</li>
+                      <li>Eyebrow Lift</li>
+                      <li>Hyperhidrosis- Armpit</li>
+                      </ul>
+                  </div> 
+              </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  
+                  Will I have more wrinkles if I stop using BOTOX? 
+                  
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    No. The aging process will continue at the same point as when you were first treated. As the medication fades away, facial muscles regain mobility causing the formation of lines and wrinkles all over again. Unlock timeless beauty and smooth away wrinkles.
+                  </div> 
+              </div>
+              </div>
+              <div class="question">
+                <div class="question-title">
+                  
+                  Does Botox have any possible side effects? 
+                  
+                  <div class="plus-minus"></div>
+                </div>
+                <div class="question-content">
+                  <div>
+                    <ul>
+                      <li>Redness</li>
+                      <li>Swelling</li>
+                      <li>Headache</li>
+                      <li>Bruises</li>
+                      <li>Eye droop</li>
+                    </ul>
+                  </div> 
+              </div>
+          </div>
+            </div>
+        </div>
+          
+          <!-- end regular accordion -->
+          <!-- start mobile accordion -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="accordion" class="blue-bck" style="padding:0px 0 30px">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="mobile-only">
+            <h2 class="heading mob-head heading-toggle">
+              Botox® Frequently<br> Asked Questions
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="accordion" style="padding:0px 0 0px">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="mobile-only">
+            <div class="all-questions-mob">
+              <div class="accordion">
+                <div class="question">
+                  <div class="question-title">
+                    What is Botox?
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      It is a non-surgical aesthetic treatment made to relax musculature, extremely safe, and approved by the FDA to prevent and reduce fine lines/ wrinkles. 
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    Is Botox bad for you?
+                    <div class="plus-minus"></div>
+                    </div>
+                  <div class="question-content">
+                    <div>
+                      No, absolutely not. We highly recommend the selection of a clinic that purchases its products only from an approved FDA wholesaler.
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                   At what age can I start Botox treatment?
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      The correct age is when lines and wrinkles are beginning to be permanently visible during no facial expression. Youthful confidence awaits at the best MedSpa in Palm Beach.
+                    </div> 
+                </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    After Botox treatment, am I going to look natural?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                    <div class="question-content">
+                    <div>
+                      Yes, absolutely. However, we highly recommend the selection of a trained and experienced practitioner to achieve the best cosmetic outcome. Transform your appearance and reveal your best self.
+                    </div> 
+                  </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    What areas can I treat with BOTOX?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      <ul>
+                        <li>Frown Lines</li>
+                        <li>Forehead Lines</li>
+                        <li>Crows Feet</li>
+                        <li>Smoker Lip Lines</li>
+                        <li>Gummy Smile</li>
+                        <li>Masseter- Bruxism</li>
+                        <li>DAO</li>
+                        <li>Mentalis</li>
+                        <li>Eyebrow Lift</li>
+                        <li>Hyperhidrosis- Armpit</li>
+                        </ul>
+                    </div> 
+                </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    Will I have more wrinkles if I stop using BOTOX? 
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                     No. The aging process will continue at the same point as when you were first treated. As the medication fades away, facial muscles regain mobility causing the formation of lines and wrinkles all over again. Unlock timeless beauty and smooth away wrinkles.
+                    </div> 
+                </div>
+                </div>
+                <div class="question">
+                  <div class="question-title">
+                    
+                    Does Botox have any possible side effects?
+                    
+                    <div class="plus-minus"></div>
+                  </div>
+                  <div class="question-content">
+                    <div>
+                      <ul>
+                        <li>Redness</li>
+                        <li>Swelling</li>
+                        <li>Headache</li>
+                        <li>Bruises</li>
+                        <li>Eye droop</li>
+                      </ul>
+                    </div> 
+                </div>
+            </div>
+              </div>
+            </div>
+            
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script>
+  
+  const headingToggle = document.querySelector('.heading-toggle');
+  const allQuestions = document.querySelector('.all-questions-mob');
+
+  headingToggle.addEventListener('click', function(e){
+        console.log('sup');
+        headingToggle.classList.toggle('active-toggle');
+        allQuestions.classList.toggle('active');
+        if(allQuestions.classList.contains('active')){
+          allQuestions.style.maxHeight = "fit-content";
+        } else{
+            allQuestions.style.maxHeight = 0;
+        }
+  });
+
+
+    // Get all question elements
+  var questions = document.getElementsByClassName('question');
+  
+  // Add click event listener to each question
+  for (var i = 0; i < questions.length; i++) {
+    questions[i].addEventListener('click', function() {
+      // Toggle active class on the clicked question
+      this.classList.toggle('active');
+  
+      // Close other open questions
+      for (var j = 0; j < questions.length; j++) {
+        if (questions[j] !== this) {
+          questions[j].classList.remove('active');
+        }
+      }
+    });
+  }
+
+
+
+  </script>

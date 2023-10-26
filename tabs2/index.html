@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+      #custom-tab-section {
+      }
+      #custom-tab-section h2 {
+        font-family: Montserrat !important;
+      }
+      #custom-tab-section .container {
+        padding-top: 0 !important;
+      }
+      .nav-pills {
+        display: flex;
+      }
+      .my-link {
+        color: #2e4062;
+        border-bottom: 3px solid #2e4062;
+        cursor: pointer;
+      }
+
+      .my-link.active {
+        background: #2e4062;
+        color: #ffffff !important;
+      }
+      .cta-call-btn {
+        background: #8bb4b0 !important;
+        border-radius: 6px !important;
+        border-width: 0 !important;
+        color: #fff !important;
+        font-family: sans-serif !important;
+        font-size: 24px !important;
+        height: auto !important;
+        line-height: 1.5em !important;
+        padding: 6px 18px !important;
+        text-decoration: none !important;
+        text-shadow: none !important;
+        transition: all 0.5s !important;
+        width: auto !important;
+      }
+      .my-link {
+        font-weight: 500;
+        height: auto;
+        min-height: 1px;
+        padding-bottom: 4px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 4px;
+        font-weight: 700;
+      }
+      .my-link:hover {
+        text-decoration: none;
+      }
+      .question-area h2 {
+        color: #2e4062;
+        font-size: 40px;
+        font-weight: 700;
+      }
+      .pt-sec {
+        padding-top: 15px;
+      }
+      .full-btn {
+        background: #01487c !important;
+        border: 0;
+        border-radius: 15px;
+        padding: 5px 38px;
+        color: #fff;
+        display: block;
+        text-align: center;
+      }
+      .question-area p {
+        font-size: 18px;
+      }
+
+      .tab-content > .tab-pane {
+        display: none;
+        animation: moving 0.5s ease;
+      }
+      .fade:not(.show) {
+        opacity: 1;
+      }
+      @keyframes moving {
+        from {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+      .tab-content > .active {
+        display: block;
+      }
+      @media (max-width: 991px) {
+        #v-pills-tabContent .pera-wrap {
+          height: auto !important;
+        }
+      }
+      @media (max-width: 767px) {
+        .question-area .nav-pills {
+          justify-content: center;
+        }
+        .tab-content .col {
+          flex: 0 0 100%;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+      @media (min-width: 991px) {
+        .my-link.arriba {
+          width: 175px;
+          margin: 1rem auto;
+          text-align: center !important;
+          display: block;
+          padding: 0.5rem 0;
+        }
+      }
+      @media (max-width: 450px) {
+        .my-link {
+          padding: 4px 17px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="custom-tab-section">
+      <div class="question-area" style="padding:30px 0 30px">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>
+                FDA-approved Brands
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-content-center my-nav-fx">
+            <div class="col-12  col-lg-12  my-nav">
+              <div
+                class="nav nav-pills  flex-lg-row   "
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <a
+                  class="my-link arriba active"
+                  role="tab"
+                  aria-controls="v-pills-1"
+                  aria-selected="true"
+                  >Botox</a
+                >
+
+                <a
+                  class="my-link arriba"
+                  role="tab"
+                  aria-controls="v-pills-2"
+                  aria-selected="false"
+                  >Dysport</a
+                >
+                <a
+                  class="my-link arriba"
+                  role="tab"
+                  aria-controls="v-pills-2"
+                  aria-selected="false"
+                  >Dysport2</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-lg-12 my-content">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade active"
+                  id="v-pills-1"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-1-tab"
+                >
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 ">
+                      <div class="row justify-content-center ">
+                        <div
+                          class="col img-fluid align-self-start"
+                          style="min-width:250px;"
+                        >
+                          <img
+                            src="https://elitetopaesthetics.com/wp-content/uploads/2023/08/Botox-promo.jpg"
+                            alt="Botox-promo"
+                            loading="lazy"
+                            style="max-width: 100%; height: auto;"
+                            width="510"
+                            height="680"
+                          />
+                        </div>
+
+                        <div class="col nav-content">
+                          <h2>Botox</h2>
+                          <p>
+                            <span
+                              >Botox is a brand name for a type of injectable
+                              neuromodulator that is derived from the bacteria
+                              that causes botulism. It is commonly used for
+                              cosmetic purposes to temporarily reduce the
+                              appearance of fine lines and wrinkles on the face
+                              by relaxing the underlying muscles. Botox works by
+                              blocking the signals from nerves to muscles, which
+                              prevents the muscles from contracting and causing
+                              wrinkles. It is a safe and effective treatment
+                              that has been used for cosmetic purposes for over
+                              20 years. Botox is typically administered by a
+                              healthcare professional and requires repeat
+                              treatments every few months to maintain its
+                              effects. It is also used for other medical
+                              purposes, such as treating migraines, excessive
+                              sweating, and muscle spasms.</span
+                            >
+                          </p>
+
+                          <div class=" pt-sec">
+                            <a
+                              class="cta-call-btn"
+                              href="https://elitetopaesthetics.com/botulinum-toxin-injections"
+                            >
+                              Learn more</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-2"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-2-tab"
+                >
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 ">
+                      <div class="row justify-content-center ">
+                        <div
+                          class="col img-fluid align-self-start"
+                          style="min-width:250px;"
+                        >
+                          <img
+                            src="https://elitetopaesthetics.com/wp-content/uploads/2023/07/Dysport-promo.jpg"
+                            alt="Dysport-promo"
+                            loading="lazy"
+                            style="max-width: 100%; height: auto;"
+                            width="510"
+                            height="680"
+                          />
+                        </div>
+
+                        <div class="col nav-content">
+                          <h2>Dysport</h2>
+                          <p>
+                            <span
+                              >Dysport is a brand name for an injectable
+                              neuromodulator that is similar to Botox. It
+                              contains botulinum toxin type A and works by
+                              relaxing the muscles that cause wrinkles on the
+                              face. Dysport is often used for cosmetic purposes,
+                              such as reducing the appearance of fine lines and
+                              wrinkles. One potential advantage of Dysport is
+                              that it may have a faster onset of action and
+                              spread over a wider area compared to Botox. Like
+                              Botox, Dysport is typically administered by a
+                              healthcare professional and requires repeat
+                              treatments every few months to maintain its
+                              effects. Dysport is a safe and effective treatment
+                              option that has been used for cosmetic and medical
+                              purposes for many years.</span
+                            >
+                          </p>
+
+                          <div class=" pt-sec">
+                            <a
+                              class="cta-call-btn"
+                              href="https://elitetopaesthetics.com/dysport/"
+                            >
+                              Learn more</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-2"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-2-tab"
+                >
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 ">
+                      <div class="row justify-content-center ">
+                        <div
+                          class="col img-fluid align-self-start"
+                          style="min-width:250px;"
+                        >
+                          <img
+                            src="https://elitetopaesthetics.com/wp-content/uploads/2023/07/Dysport-promo.jpg"
+                            alt="Dysport-promo"
+                            loading="lazy"
+                            style="max-width: 100%; height: auto;"
+                            width="510"
+                            height="680"
+                          />
+                        </div>
+
+                        <div class="col nav-content">
+                          <h2>Dysport 2</h2>
+                          <p>
+                            <span
+                              >Dysport is a brand name for an injectable
+                              neuromodulator that is similar to Botox. It
+                              contains botulinum toxin type A and works by
+                              relaxing the muscles that cause wrinkles on the
+                              face. Dysport is often used for cosmetic purposes,
+                              such as reducing the appearance of fine lines and
+                              wrinkles. One potential advantage of Dysport is
+                              that it may have a faster onset of action and
+                              spread over a wider area compared to Botox. Like
+                              Botox, Dysport is typically administered by a
+                              healthcare professional and requires repeat
+                              treatments every few months to maintain its
+                              effects. Dysport is a safe and effective treatment
+                              option that has been used for cosmetic and medical
+                              purposes for many years.</span
+                            >
+                          </p>
+
+                          <div class=" pt-sec">
+                            <a
+                              class="cta-call-btn"
+                              href="https://elitetopaesthetics.com/dysport/"
+                            >
+                              Learn more</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+
+    </script>
+
+</body>
+
+
+
+<script>
+    const tabButtons = document.querySelectorAll(".my-link");
+    const tabPanes = document.querySelectorAll(".tab-pane");
+
+    tabButtons.forEach((button, index) => {
+      button.addEventListener('click', function(e){
+        tabButtons.forEach((tab) => {
+          tab.classList.remove('active');
+        }); 
+        button.classList.add('active');
+
+        tabPanes.forEach((tab) => {
+          tab.classList.remove('active');
+        }); 
+        tabPanes[index].classList.add('active');
+      });
+    });
+
+
+
+
+
+    // tabButtons.forEach((button, index) => {
+    //   button.addEventListener('click', function(){
+    //     tabButtons.forEach( tab => {
+    //       tab.classList.remove("active");
+    //     });
+    //     button.classList.add("active");
+
+    //     tabPanes.forEach(tabPane => {
+    //       tabPane.classList.remove("active");
+    //     });
+    //     tabPanes[index].classList.add('active');
+
+    //   });
+    // });
+
+    // for(let i = 0; i < tabButtons.length; i++){
+    //   tabButtons[i].addEventListener('click', function(){
+
+    //     for(let y = 0; y<tabButtons.length; y++){
+    //       if(i !== y){
+    //         tabButtons[y].classList.remove("active");
+    //         tabPanes[y].classList.remove("active");
+
+    //       }
+    //     }
+    //     tabButtons[i].classList.add('active');
+    //     tabPanes[i].classList.add('active');
+
+
+    //   });
+    // }
+
+
+    // let iterable = [10, 20, 30];
+    
+    // for (let value of iterable) {
+    //    console.log(value);
+    // }
+
+    // let iterable2 = [10, 20, 30];
+
+    // iterable2.forEach((val) => {
+    //   console.log(val);
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // tabButtons.forEach((button, index) => {
+    //     button.addEventListener('click', function(){
+    //         tabButtons.forEach((tab) => {
+    //             tab.classList.remove('active');
+    //         });
+    //         console.log("added active class");
+    //         button.classList.add('active');
+
+    //         tabPanes.forEach( pane =>{
+    //             pane.classList.remove('active');
+    //         });
+    //         tabPanes[index].classList.add("active");
+
+    //     });
+    // });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+      const tabs = document.querySelectorAll(".my-link");
+      const all_content = document.querySelectorAll(".tab-pane");
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", function(e) {
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
+          all_content.forEach((content) => {
+            content.classList.remove("active");
+          });
+          all_content[index].classList.add("active");
+        });
+      });
+    </script> -->
+
+    <script>
+      // const tabFunction = function(){
+      //     const tabsBtns = document.querySelectorAll(".tabs__button");
+      //     tabsBtns.forEach((button, index) => {
+      //         button.addEventListener('click', function(){
+      //             const tabsContainer = document.querySelector(".tabs");
+      //             const sidebar = document.querySelector(".tabs__sidebar");
+      //             const tabsContent = document.querySelectorAll(".tabs__content");
+
+      //             const selectedButton = button;
+      //             console.log(button);
+
+      //             const tabNumber = button.dataset.forTab;
+      //             const selectedTabContent = document.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
+      //             console.log(selectedTabContent);
+      //             tabsBtns.forEach(tabBtn => {
+      //                 tabBtn.classList.remove('tabs__button--active');
+
+      //             });
+      //             tabsContent.forEach(tabContent => {
+      //                 tabContent.classList.remove('tabs__content--active');
+
+      //             });
+
+      //             button.classList.add("tabs__button--active");
+      //             selectedTabContent.classList.add("tabs__content--active");
+
+      //         });
+      //     });
+      // };
+      // document.addEventListener("DOMContentLoaded", function(){
+      //         tabFunction();
+      //     });
+    </script>
+
+    <script>
+      // function setupTabs(){
+      //    const buttons =  document.querySelectorAll(".tabs__button")
+      //     buttons.forEach(button => {
+      //         button.addEventListener('click', function(){
+      //             // console.log(button);
+
+      //             const tabsContainer = document.querySelector('.tabs');
+      //             const sidebar = document.querySelector(".tabs__sidebar");
+
+      //             // down here dataset refers to any attributes that start with "data-" then "forTab" means the for-tab on the button
+      //             const tabNumber = button.dataset.forTab;
+      //             const tabToActivate = document.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
+
+      //             const tabsButtons = sidebar.querySelectorAll('.tabs__button');
+      //             tabsButtons.forEach( tabButton => {
+      //                 tabButton.classList.remove('tabs__button--active');
+
+      //             } );
+      //             const tabsContent = document.querySelectorAll('.tabs__content');
+      //             tabsContent.forEach( tab => {
+      //                 tab.classList.remove('tabs__content--active');
+      //             } );
+
+      //             button.classList.add("tabs__button--active");
+      //             tabToActivate.classList.add("tabs__content--active");
+      //         });
+      //     });
+      // }
+      // document.addEventListener("DOMContentLoaded", function(){
+      //     setupTabs();
+      // });
+    </script>
+  </body>
+</html>

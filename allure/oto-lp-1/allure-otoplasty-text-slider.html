@@ -1,0 +1,136 @@
+<style>
+  #bef-and-aft-carousel{
+
+
+  }
+  #slider-botox h2{
+    text-align: center;
+    font-size: 43px;
+    font-weight: 700;
+  }
+  #slider-botox{
+    background: #fff;
+  }
+  #slider-botox button{
+    border: none!important;
+    font-size: 50px;
+  }
+
+  @media(max-width:450px){
+    .carousel-section.before{
+      padding:0px 0 30px!important;
+    }
+    #slider-botox .owl-item.active{
+      
+
+    }
+    #slider-botox h2{
+    margin-top: 10px;
+  }
+    #slider-botox .item h4{
+      display: none;
+    }
+  }
+</style>
+<section id="slider-botox" class="carousel-section before">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 pt-4 flex-cont">
+        <h2 class="">Before and After</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="after-before-carousel owl-carousel owl-theme">      
+          <div class="item">
+            <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/08/oto-14.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/08/oto-15.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/08/oto-12.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="https://elitetopaesthetics.com/wp-content/uploads/2023/08/oto-13.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-1.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-2.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-3.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-4.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-5.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-6.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-7.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-8.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-9.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-10.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>
+          <div class="item">
+            <img src="http://www.allureplasticsurgery.com/wp-content/uploads/2023/08/oto-11.webp" loading="lazy" alt="Item" class="img-fluid mb-2 carousel-border">
+          </div>         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<link rel="stylesheet" href="https://procedures.elitetopaesthetics.com/css/owl.carousel.min.css">
+<link rel="stylesheet" href="https://procedures.elitetopaesthetics.com/css/owl.theme.default.min.css">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://procedures.elitetopaesthetics.com/js/owl.carousel.min.js"></script>
+<script>
+setTimeout(() => {
+      
+      console.log("Delayed for 1 second.");
+    }, "2000");
+$(document).ready(function(){
+$('.after-before-carousel').owlCarousel({
+      autoplay: false,
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      navClass: ["arrow arrow-prev", "arrow arrow-next"],
+      responsive: {
+        0: {
+          items: 1,
+          slideBy:1
+        },
+        768: {
+          items: 1
+        },
+        992: {
+          items: 3
+        },
+        1500: {
+          items: 3
+        },
+        2500: {
+          items: 3
+        }
+        
+
+      }
+    });
+});
+
+</script>

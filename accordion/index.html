@@ -20,8 +20,28 @@
                     <div class="h1">FAQs</div>
                     <div class="accordion">
                        <div class="accordion-item">
-                           <div class="accordion-item-header active">
+                           <div class="accordion-item-header">
                                How are you?
+                           </div>
+                           <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quas dignissimos architecto tenetur adipisci minus maiores quisquam cumque ipsa sunt minima sit, cum suscipit aspernatur hic omnis, autem corporis? Facere.
+                                </div>
+                           </div>
+                       </div>
+                       <div class="accordion-item">
+                           <div class="accordion-item-header">
+                               What is HTML?
+                           </div>
+                           <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quas dignissimos architecto tenetur adipisci minus maiores quisquam cumque ipsa sunt minima sit, cum suscipit aspernatur hic omnis, autem corporis? Facere.
+                                </div>
+                           </div>
+                       </div>
+                       <div class="accordion-item">
+                           <div class="accordion-item-header">
+                               What is HTML?
                            </div>
                            <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -41,10 +61,80 @@
                        </div>
                     </div>
                 </div>
+                <section id="employees-section">
+                    <input type="text" name="Employee name" id="emp-name">
+                    <button id="add-btn">
+                        Add an employee
+                    </button>
+                    <h3>Employees list:</h3>
+                    <div class="employees-list">
+
+                    </div>
+                </section>
             </div>
         </div>
         
     </section>
 </body>
+<script>
+    let addBtn = document.getElementById('add-btn');
+    let input = document.getElementById('emp-name');
+    let empList = document.querySelector('.employees-list');
 
+    addBtn.addEventListener('click', function(e){
+        addBtnFunc();
+    })
+
+    let addBtnFunc = function(){
+        let newLi = document.createElement('li');
+
+        if(input.value === ""){
+            alert('empty value!');
+        } else{
+            newLi.innerHTML = input.value;
+        }
+        attachRemoveBtn(newLi);
+        empList.append(newLi);
+        input.value = "";
+    }
+
+    let attachRemoveBtn = function(li){
+        let newBtn = document.createElement('button');
+        
+        newBtn.innerHTML = "Remove";
+        newBtn.classList.add('rm-button');
+        li.append(newBtn);
+    }
+
+    // let removeMe = function(){
+    //     for(let i = 0; i < remBtn.length; i++){
+    //         const remBtn = document.querySelectorAll('.rm-button');
+    //         remBtn[i].addEventListener('click', function(){
+    //             remBtn[i].parentNode.remove();
+    //         })
+            
+    //     }
+    // }
+    const anotherAllList = document.querySelector('.employees-list');
+    anotherAllList.addEventListener('click', function(e){
+
+    if(e.target.className === "rm-button"){
+        e.target.parentNode.remove();
+        }    
+    });
+
+    
+</script>
+<style>
+    #employees-section{
+        padding-top: 30px;
+    }
+    #employees-section .rm-button{
+        padding: 10px 15px;
+        background: red;
+        color: #000;
+    }
+    #employees-section{}
+    #employees-section{}
+</style>
 </html>

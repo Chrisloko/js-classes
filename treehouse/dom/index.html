@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and the DOM</title>
+    <link href="./styles.css" rel="stylesheet">
+    <style>
+      .mystyle {
+       display:none;
+      }
+
+      .button-group{
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 30px;
+      }
+      .special-btn{
+        color: white;
+        font-size: 1em;
+        padding: 1em;
+        background-color: var(--color-add);
+      }
+      .special-btn.working{
+        
+        background-color: var(--color-remove-light);
+      }
+      .tab-btn{
+        color: white;
+        font-size: 1em;
+        padding: 1em;
+        background-color: var(--color-add);
+      }
+      .tab-btn.open{
+        
+        background-color: var(--color-remove-light);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="" id="headline">My Day</h1>
+        <button id="top-btn">Grow Text</button>
+        <div class="group">
+          <label for="main">What's your task?</label>
+          <input type="text" id="main" class="input-main">
+          <button id="btn-main">Add task</button>
+        </div>
+      </header>
+
+      <button onclick="toggList()" class="btn-toggle">Hide List</button>
+
+      <div id="list" class="list-container">
+        <ul class="unordered-list" aria-live="polite">
+          <li>Make coffee</li>
+          <li>Practice JavaScript</li>
+          <li>Walk the cat</li>
+          <li>Watch a Treehouse video</li>
+          <li>Go swimming</li>
+          <li>Play my guitars</li>
+        </ul>
+        <!-- <button class="btn-remove">Remove Last Task</button> -->
+      </div>
+      <div>
+        <button class="remove-me">Remove me</button>
+      </div>
+      
+    </div>
+    <section id="tabs">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="button-group">
+              <div class="special-btn">Click me 1</div>
+              <div class="special-btn">Click me 2</div>
+              <div class="special-btn">Click me 3</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="button-group">
+              <div class="tab-btn">Tab 1</div>
+              <div class="tab-btn">Tab 2</div>
+              <div class="tab-btn">Tab 3</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="tab tab-1 open">
+              Tab 1 Open
+            </div>
+            <div class="tab tab-2">
+              Tab 2 Open
+            </div>
+            <div class="tab tab-3">
+              Tab 3 Open
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
+<style>
+  .tab.open{
+    display: block;
+  }
+  .tab{
+    display: none;
+  }
+</style>
+<script>
+  const specialBtns = document.querySelectorAll('.special-btn');
+  for(let i = 0; i < specialBtns.length; i++) {
+    specialBtns[i].addEventListener('click', function(){
+      specialBtns[i].classList.add('working');
+      for(let j = 0; j < specialBtns.length; j++){
+        if(specialBtns[j] !== specialBtns[i]){
+          specialBtns[j].classList.remove('working');
+          
+        }
+      }
+
+    });
+  };
+
+
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabs = document.querySelectorAll('.tab')
+  for(let i = 0; i < tabBtns.length; i++) {
+    tabBtns[i].addEventListener('click', function(){
+      tabBtns[i].classList.add('open');
+      for(let j = 0; j < tabs.length; j++){
+        if(tabs[j] !== tabBtns[i]){
+          tabBtns[j].classList.remove('open');
+          
+        }
+      }
+
+    });
+  };
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

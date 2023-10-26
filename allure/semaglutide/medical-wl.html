@@ -1,0 +1,152 @@
+<style>
+    #advantages {
+        padding: 60px 0;
+    }
+
+    #advantages h2 {
+        text-align: center;
+        font-size: 46px;
+        margin-bottom: 30px;
+    }
+
+    #advantages span {
+        font-weight: 700;
+        color: #198fb5;
+    }
+
+    #advantages .box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border: solid 3px #eee;
+        border-radius: 20px;
+        align-items: center;
+        padding: 15px;
+    }
+
+    #advantages .box img {
+        max-width: 40%;
+        flex: 0 0 40%;
+        padding: 0 15px;
+    }
+
+    #advantages p {
+        font-size: 22px;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    #advantages .big-box {
+        padding: 25px;
+        border-radius: 20px;
+        background-color: #e2e2e2;
+    }
+
+    #advantages .big-box .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #advantages .big-box .item-50 {
+        flex: 0 0 50%;
+        padding: 0 15px;
+        max-width: 50%;
+    }
+    #advantages .big-box .item-50 ul{
+        
+        padding-left: 5px;
+    }
+    #advantages .big-box .item-50 li{
+        line-height: 2;
+        position: relative;
+        list-style: none;
+        font-size: 22px;
+        
+       
+    }
+    #advantages .big-box .item-50 li::before{
+        content: '•';
+          color: #198fb5;
+          position: absolute;
+          left: -17px;
+          font-size: 35px;
+          top: 50%;
+          transform: translateY(-50%);
+      
+    }
+
+    @media(max-width:767px) {
+        #advantages {
+        padding: 30px 0;
+    }
+        #advantages .big-box {
+        padding: 0px;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+        #advantages .big-box h2 {
+            text-align: left;
+            font-size: 29px;
+        }
+        #advantages p {
+            text-align: left;
+        }
+        #advantages .big-box .item-50 {
+            flex: 0 0 100%;
+            padding: 0 15px;
+            max-width: 100%;
+        }
+        #advantages .big-box .item-50 ul{
+            margin-bottom: 0;
+        }
+        #advantages .big-box .item-50 li{
+            line-height: 2;
+            position: relative;
+            list-style: none;
+            font-size: 16px;
+            
+        
+     }
+    }
+</style>
+<section id="advantages" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="big-box">
+                    <h2>
+                        Medical <span class="bold">Weight Loss Program</span> with  Semaglutide
+                    </h2>
+                    <p>Semaglutide is a glucagon-like peptide 1 agonist that induces weight loss by controlling
+                        appetite. Losing excess weight can provide many health benefits by improving cardiovascular
+                        health, metabolic health, and restoring hormones, such as testosterone, to their baseline
+                        levels.</p>
+                    <div class="flex-container">
+                        <div class="item-50">
+                            <ul>
+                                <li>Reduced Pain</li>
+                                <li>Decreased Blood Pressure</li>
+                                <li>Decreased Risk for Cardiovascular Disease</li>
+                                <li>Better Lung Function</li>
+                                <li>Reduced Risk for Stroke or Heart Attack</li>
+                                <li>Lower Triglycerides</li>
+                            </ul>
+                        </div>
+                        <div class="item-50">
+                            <ul>
+                                <li>Improved Mobility</li>
+                                <li>Less Joint Damage</li>
+                                <li>Lower Risk of Erectile Dysfunction</li>
+                                <li>Enhanced Libido</li>
+                                <li>Higher Self-Esteem</li>
+                                <li>Better Sleep</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
