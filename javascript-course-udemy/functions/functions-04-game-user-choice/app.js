@@ -78,17 +78,27 @@ startGameBtn.addEventListener("click", function() {
 });
 
 
-const sumUp = (numbers) => {
-  let sum = 0;
-  for(const num of numbers){
-    sum = sum + num;
+const sumUp = (...numbers) => {
+  const validateNumber = (number) => {
+    return isNaN(number) ? 0 : number;
+  };
+    let sum = 0;
+    for(const num of numbers){
+      sum = sum + validateNumber(num);
+    }
+    return sum;
   }
-  return sum;
-}
 
-
-
-console.log(sumUp([2, 3, 4]));
+const subtractUp = function(...numbers) {
+    let sum = 0;
+    for(const num of numbers){
+      sum = sum - num;
+    }
+    return sum;
+  }
+  console.log(sumUp(2, 3, 4, "hello", 23)); // 9
+  
+  console.log(subtractUp(2, 3, 4)); // 
 
 // const getPlayerChoice = function() {
 //   const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, '').toUpperCase();

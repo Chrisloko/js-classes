@@ -196,17 +196,33 @@
         #testimonials-slider .owl-nav {
             text-align: center;
         }
-
+        #testimonials-slider button {
+            border: none !important;
+            font-size: 1px;
+            line-height: 1;
+            background: transparent;
+            color: #000;
+        }
         #testimonials-slider .arrow-prev {
             position: unset;
-
+            display: none;
         }
 
         #testimonials-slider .arrow-next {
             position: unset;
 
         }
-
+        #testimonials-slider button::after {
+                background-image: url('https://elitetopaesthetics.com/wp-content/uploads/2023/08/Icono-flecha2.webp');
+                content: "";
+                width: 40px;
+                height: 40px;
+                display: block;
+                background-size: contain;
+                position: relative;
+                top: 0;
+                cursor: pointer;
+            }
         #testimonials-slider .pr-col {
             min-height: unset;
             padding-top: 20px;
