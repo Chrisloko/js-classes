@@ -1,0 +1,151 @@
+
+#proyectos-int-top {
+    padding: 60px 0 0
+}
+
+#proyectos-int-top img {
+    display: block;
+    margin: 0 auto 30px;
+    width: 100%
+}
+
+#proyectos-int-top .cont-text {
+    margin-bottom: 0
+}
+
+#proyectos-int-top .h1-cont {
+    margin-bottom: 30px
+}
+
+#proyectos-int-top h1 {
+    color: #87b9a8;
+    font-size: 40px
+}
+
+#proyectos-int-top h1,#proyectos-int-top h2 {
+    font-weight: 700;
+    margin-top: 0
+}
+
+#proyectos-int-top p {
+    color: #666;
+    font-size: 16px
+}
+
+#cajas-index {
+    padding: 15px 0 45px
+}
+
+#cajas-index .row {
+    display: flex;
+    flex-wrap: wrap
+}
+
+#cajas-index .item-3 {
+    flex: 0 0 33.33%;
+    max-width: 100%
+}
+
+#cajas-index .img-cont {
+    position: relative
+}
+
+#cajas-index .img-cont img {
+    height: auto;
+    padding: 15px;
+    width: 100%
+}
+
+#cajas-index .col-md-12,#cajas-index .col-md-4 {
+    padding: 15px
+}
+
+#cajas-index .col-md-4 img {
+    max-width: 100%;
+    width: 100%
+}
+
+@media(max-width: 1600px) {
+    #cajas-index .item-3 {
+        flex:0 0 33.3%;
+        margin: 0;
+        max-width: 100%
+    }
+
+    #cajas-index .img-cont img {
+        height: auto;
+        padding: 15px;
+        width: 100%
+    }
+}
+
+@media(max-width: 1250px) {
+    #cajas-index .item-3 {
+        flex:0 0 33.3%;
+        margin: 0;
+        max-width: 100%
+    }
+}
+
+@media(max-width: 1024px) {
+    #cajas-index .item-3 {
+        flex:0 0 33.3%;
+        margin: 0;
+        max-width: 100%
+    }
+
+    #cajas-index .item-3 img {
+        padding: 15px;
+        width: 100%
+    }
+}
+
+@media(max-width: 992px) {
+    #cajas-index .item-3 {
+        flex:0 0 33.3%;
+        margin: 0;
+        max-width: 100%
+    }
+}
+
+@media(max-width: 768px) {
+    #cajas-index .item-3 {
+        flex:0 0 33.3%;
+        margin: 0;
+        max-width: 100%
+    }
+}
+
+@media(max-width: 767px) {
+    #cajas-index .item-3 {
+        flex:0 0 100%;
+        max-width: 100%
+    }
+
+    .disp-n-m {
+        display: none
+    }
+}
+
+@media(max-width: 393px) {
+    #cajas-index .img-cont img {
+        height:100%;
+        width: 100%
+    }
+}
+
+@media(max-width: 376px) {
+    #cajas-index .img-cont img {
+        height:100%;
+        width: 100%
+    }
+}
+
+
+
+
+.borrar-img{
+    opacity: 1;
+    display: none;
+    transition: 0.3s ease;
+}
